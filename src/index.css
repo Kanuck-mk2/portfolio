@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 14px 5px hsl(286, 69%, 51%);
+  }
+  12.5% {
+    box-shadow: 0 0 12px 5px hsl(240, 65%, 51%);
+  }
+  25% {
+    box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
+  }
+  37.5% {
+    box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
+  }
+  50% {
+    box-shadow: 0 0 14px 5px hsl(146, 64%, 43%);
+  }
+  62.5% {
+    box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
+  }
+  75% {
+    box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
+  }
+  87.5% {
+    box-shadow: 0 0 12px 5px hsl(240, 65%, 51%);
+  }
+  100% {
+    box-shadow: 0 0 14px 5px hsl(286, 69%, 51%);
+  }
+}
+
+.glow-border:hover {
+  animation: glow 5s ease-in-out infinite;
+}
+
+@keyframes shape2 {
+  0% {
+    box-shadow: 0 0 14px 5px hsl(286, 69%, 51%);
+    border-radius: 100%; /* Top left, top right, bottom right, bottom left */
+  }
+  12.5% {
+    box-shadow: 0 0 12px 5px hsl(240, 65%, 51%);
+    border-radius: 35% 5% 25% 15%;
+  }
+  25% {
+    box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
+    border-radius: 45% 25% 35% 15%;
+  }
+  37.5% {
+    box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
+    border-radius: 55% 35% 45% 25%;
+  }
+  50% {
+    box-shadow: 0 0 14px 5px hsl(166, 64%, 43%);
+    border-radius: 20% 50% 10% 40%;
+  }
+  62.5% {
+    box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
+    border-radius: 25% 15% 35% 5%;
+  }
+  75% {
+    box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
+  }
+  87.5% {
+    box-shadow: 0 0 12px 5px hsl(240, 65%, 51%);
+  }
+  100% {
+    box-shadow: 0 0 14px 5px hsl(286, 69%, 51%);
+  }
+}
+
+.shape2-border:hover {
+  animation: shape2 5s ease-in-out infinite;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    to bottom right,
+    rgb(96 165 250),
+    rgb(87, 124, 169)
+  );
+}
+
+.text-gr {
+  background: linear-gradient(
+    to bottom right,
+    rgb(96, 165, 250),
+    rgb(101, 136, 179)
+  );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
