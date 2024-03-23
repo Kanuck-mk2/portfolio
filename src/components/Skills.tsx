@@ -1,7 +1,14 @@
 import SkillsSet from './SkillsSet';
 import { motion } from 'framer-motion';
 
-const data = [
+interface SkillData {
+  year: string;
+  title: string;
+  duration: string;
+  details: string;
+}
+
+const data: SkillData[] = [
   {
     year: '2023',
     title: 'HTML5',
@@ -50,10 +57,10 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className=" bg-black border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16  relative z-10"
+      className="bg-black border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
     >
       <motion.h1
-        className="text-4xl  p-4 font-nunito font-bold text-center text-white"
+        className="text-4xl p-4 font-nunito font-bold text-center text-white"
         initial={{ opacity: 0, x: 0, y: 300 }}
         whileInView={{
           opacity: 1,

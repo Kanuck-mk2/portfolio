@@ -1,23 +1,22 @@
 import { motion } from 'framer-motion';
 import ImageSlider from './ImageSlider';
 
-const About = () => {
-  const imageAssets = [
+const About: React.FC = () => {
+  const imageAssets: string[] = [
+    './profile/shawn1.webp',
     './profile/shawn-side.jpg',
-    './profile/profile.jpg',
-    './profile/shawn-posing.jpg',
     './profile/shawn2.webp',
-    './profile/shawn-sing.jpg',
+    './profile/shawn4.webp',
+    './profile/shawn5.webp',
   ];
 
   return (
     <div
       id="about"
-      className="border-2 w-full m-auto md:pl-20 p-4 py-16  relative rounded-lg bg-gradient-to-br  from-blue-500 to-slate-500"
+      className="border-2 w-full m-auto md:pl-20 p-4 py-16  relative rounded-lg gradient-bg"
     >
       <motion.h1
-        className="font-nunito font-bold text-4xl text-center mt-10 
-      text-white"
+        className="font-nunito font-bold text-4xl text-center text-white mt-10 mb-5"
         initial={{ opacity: 0, x: 0, y: -100 }}
         whileInView={{
           opacity: 1,
@@ -29,36 +28,17 @@ const About = () => {
       >
         My Story
       </motion.h1>
-      <div className="flex flex-col md:flex-row  justify-between">
-        <div className="w-full md:w-1/3 rounded-lg  border-slate-500 m-4 p-2">
-          <motion.div
-            className="hidden md:block"
-            initial={{ opacity: 0, x: -200, y: 0 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-              rotate: 720,
-              transition: { type: 'spring', stiffness: 100, duration: 2 },
-            }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.5, rotate: 360 }}
-            >
-              <ImageSlider imageAssets={imageAssets} />
-            </motion.div>
-          </motion.div>
 
+      <div className="flex flex-col md:flex-row  justify-between items-center ">
+        <div className=" w-full md:w-2/4 rounded-lg p-2 flex justify-center ">
           <motion.div
-            className="md:hidden w-2/3 ml-14 mt-3"
-            initial={{ opacity: 0, x: -200, y: 0 }}
+            initial={{ opacity: 0, x: -400, y: 0 }}
             whileInView={{
               opacity: 1,
               x: 0,
               y: 0,
               rotate: 720,
-              transition: { duration: 2, type: 'spring' },
+              transition: { type: 'spring', duration: 2 },
             }}
           >
             <motion.div
@@ -81,7 +61,7 @@ const About = () => {
           }}
           transition={{ type: 'spring' }}
           whileHover={{
-            scale: 1.05,
+            scale: 1.1,
           }}
         >
           I grew up in Edmonton, Alberta, surrounded by the sprawling landscapes

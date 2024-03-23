@@ -3,6 +3,7 @@ import { motion, Transition, Variants } from 'framer-motion';
 interface ProjectItemProps {
   img: string;
   title: string;
+  link: string;
 }
 
 const transition: Transition = {
@@ -19,7 +20,7 @@ const customHoverVariants: Variants = {
   hover: { y: -30, rotate: -10 },
 };
 
-const ProjectItem: React.FC<ProjectItemProps> = ({ img, title }) => {
+const ProjectItem: React.FC<ProjectItemProps> = ({ img, title, link }) => {
   return (
     <motion.div
       initial="initial"
@@ -40,7 +41,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ img, title }) => {
               {title}
             </h3>
 
-            <a href="/">
+            <a href={link}>
               <p className="text-center p-3 mt-3 rounded-lg bg-black text-white font-bold cursor-pointer text-lg">
                 View Project
               </p>

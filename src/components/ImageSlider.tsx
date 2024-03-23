@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface ImageSliderProps {
   imageAssets: string[];
@@ -12,10 +13,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ imageAssets }) => {
   };
 
   return (
-    <img
+    <motion.img
       alt={`profile${currentImageIndex + 1}`}
       src={imageAssets[currentImageIndex]}
-      className="w-full rounded-full border-4 border-slate-200 shape2-border cursor-pointer"
+      className="rounded-full border-4 border-slate-200 shape2-border w-[400px] ml-5 cursor-pointer"
       onClick={handleImageClick}
     />
   );

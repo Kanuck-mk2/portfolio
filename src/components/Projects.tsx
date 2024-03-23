@@ -1,5 +1,4 @@
 import ProjectItem from './ProjectItem';
-
 import burgerWebsiteImg from '../assets/burger-website.png';
 import { motion } from 'framer-motion';
 
@@ -33,21 +32,23 @@ export default function Projects() {
           y: 0,
           transition: { type: 'spring' },
         }}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.05 }}
       >
         Utilizing my skill set and approach, I've applied these principles to
         the projects I've created so far. This involves integrating creativity,
         problem-solving, and technical expertise to develop visually trending
-        designs. <br className='mb-4'/> By leveraging modern web development tools like React, Vite,
-        TypeScript, and Framer Motion, I've crafted innovative projects that
-        push the boundaries of web design and development, staying ahead of
-        visual trends and delivering captivating UI/UX experiences.
+        designs. <br className="mb-4" /> By leveraging modern web development
+        tools like React, Vite, TypeScript, and Framer Motion, I've crafted
+        innovative projects that push the boundaries of web design and
+        development, staying ahead of visual trends and delivering captivating
+        UI/UX experiences.
       </motion.p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols gap-12">
         <ProjectItem
           img={burgerWebsiteImg}
           title="Burger Restaurant Website Layout"
+          link="/"
         />
         {/*add another ProjectItem component here */}
       </div>

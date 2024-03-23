@@ -26,7 +26,7 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
           }}
         >
           <motion.span
-            className="inline-block px-2 py-1 font-semibold text-white bg-gradient-to-br from-blue-400 to-slate-500 rounded-md"
+            className="inline-block px-2 py-1 font-semibold text-white gradient-bg rounded-md"
             initial={{ opacity: 0, x: -200, y: -300 }}
             animate={{
               opacity: 1,
@@ -69,7 +69,7 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
         </motion.p>
 
         <motion.p
-          className="my-2 text-base font-normal text-white"
+          className="my-2 text-base font-normal text-white "
           initial={{ opacity: 0, x: 500, y: 0 }}
           whileInView={{
             opacity: 1,
@@ -78,7 +78,7 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
             transition: { type: 'spring', duration: 2 },
           }}
           whileHover={{
-            scale: 1.1,
+            scale: 1.05,
           }}
         >
           {details}

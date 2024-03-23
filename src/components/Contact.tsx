@@ -48,7 +48,7 @@ export default function Contact() {
             whileTap={{ scale: 0.5 }}
           >
             <div className="flex flex-col">
-              <label className="uppercase  text-sm py-2">Name</label>
+              <label className="uppercase  text-sm py-2 text-white">Name</label>
 
               <input
                 className="border-2 rounded-lg p-3 flex border-gray-300"
@@ -70,7 +70,9 @@ export default function Contact() {
             whileTap={{ scale: 0.5 }}
           >
             <div className="flex flex-col">
-              <label className="uppercase  text-sm py-2">Phone</label>
+              <label className="uppercase  text-sm  text-white py-2">
+                Phone
+              </label>
               <input
                 className="border-2 rounded-lg p-3 flex border-gray-300"
                 type="text"
@@ -92,7 +94,7 @@ export default function Contact() {
           whileTap={{ scale: 0.5 }}
         >
           <div className="flex flex-col py-2">
-            <label className="uppercase text-sm py-2 ">Email</label>
+            <label className="uppercase text-sm py-2 text-white">Email</label>
             <input
               className="border-2 rounded-lg p-3 flex border-gray-300"
               type="email"
@@ -113,7 +115,9 @@ export default function Contact() {
           whileTap={{ scale: 0.5 }}
         >
           <div className="flex flex-col py-2">
-            <label className="uppercase  text-sm py-2">Subject</label>
+            <label className="uppercase  text-sm py-2 text-white">
+              Subject
+            </label>
             <input
               className="border-2 rounded-lg p-3 flex border-gray-300"
               type="text"
@@ -134,7 +138,7 @@ export default function Contact() {
           whileTap={{ scale: 0.5 }}
         >
           <div className="flex flex-col py-2">
-            <label className="uppercase text-sm py-2">Message</label>
+            <label className="uppercase text-sm py-2 text-white">Message</label>
             <textarea
               className="border-2 rounded-lg p-3 border-gray-300"
               rows={10}
