@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
-    setNav((prevNav) => !prevNav);
+    setNav((prevState) => !prevState);
   };
 
   const handleLinkClick = () => {
@@ -22,7 +22,7 @@ export default function Sidenav() {
   return (
     <div>
       <AiOutlineMenu
-        onClick={handleNav}
+        onClick={nav ? handleLinkClick : handleNav}
         className="fixed top-4 right-4 md:hidden text-white z-[999]"
         size={25}
       />

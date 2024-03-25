@@ -3,16 +3,13 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div id="hero" className="">
-      <video
+    <div id="hero" className="w-full h-screen gradient-bg2 ">
+      {/*<img
         className="w-full h-screen object-cover object-left "
-        autoPlay
-        muted
-        loop
-        disablePictureInPicture
-      >
-        <source src="./bg-vid.mp4" type="video/mp4" />
-      </video>
+        alt="background"
+        src="/bg-2.jpg"
+  />*/}
+
 
       <div className="w-full h-screen absolute top-0 left-0 ">
         {/*center section */}

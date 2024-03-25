@@ -102,12 +102,22 @@
   color: transparent;
 }
 
-
-
 .border-bg {
-  background: linear-gradient(to bottom right, rgb(10, 109, 231), rgb(87, 124, 169));
+  background: linear-gradient(
+    to bottom right,
+    rgb(10, 109, 231),
+    rgb(87, 124, 169)
+  );
   border: 2px solid transparent; /* Set a transparent border */
   border-image-slice: 1;
-  border-image-source: linear-gradient(to bottom right, rgb(10, 109, 231), rgb(87, 124, 169)); /* Use gradient as border image */
-  background-clip: padding-box; /* Clip the background to the padding-box */
+  border-image-source: linear-gradient(
+    to bottom right,
+    rgb(10, 109, 231),
+    rgb(87, 124, 169)
+  ); 
+  background-clip: padding-box; 
+}
+
+.gradient-bg2 {
+  background: linear-gradient(45deg, #a66cb9, #5e106c);
 }
