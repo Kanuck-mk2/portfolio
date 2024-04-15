@@ -3,6 +3,7 @@ import ImageSlider from './ImageSlider';
 
 const About: React.FC = () => {
   const imageAssets: string[] = [
+    './profile/shawnm1.jpg',
     './profile/shawn1.webp',
     './profile/shawn-side.jpg',
     './profile/shawn2.webp',
@@ -11,64 +12,59 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div
-      id="about"
-      className="border-2 w-full m-auto md:pl-20 p-4 py-16  relative rounded-lg gradient-bg"
-    >
+    <div id="about" className="border-2 w-full m-auto py-16 gradient-bg">
       <motion.h1
         className="font-nunito font-bold text-4xl text-center text-white mt-10 mb-5"
-        initial={{ opacity: 0, x: 0, y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
         whileInView={{
           opacity: 1,
-          x: 0,
           y: 0,
-          transition: { type: 'spring', stiffness: 100 },
+          transition: { duration: 3, type: 'spring' },
         }}
+        viewport={{ once: true }}
         whileTap={{ rotate: 360 }}
       >
         My Story
       </motion.h1>
 
-      <div className="flex flex-col md:flex-row  justify-between items-center ">
-        <div className=" w-full md:w-2/4 rounded-lg p-2 flex justify-center ">
-          <motion.div
-            initial={{ opacity: 0, x: -400, y: 0 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-              rotate: 720,
-              transition: { type: 'spring', duration: 2 },
-            }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.5, rotate: 360 }}
-            >
-              <ImageSlider imageAssets={imageAssets} />
-            </motion.div>
-          </motion.div>
-        </div>
-
-        <motion.p
-          className="text-slate-200 flex flex-col justify-start 
-          overflow-x-hidden md:w-2/3 p-4 mt-4"
-          initial={{ opacity: 0, x: 500, y: 0 }}
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <motion.div
+          className="w-full md:w-2/4 rounded-lg p-2 flex justify-center"
+          initial={{ opacity: 0, x: -400 }}
           whileInView={{
             opacity: 1,
             x: 0,
-            y: 0,
+            rotate: 720,
+            transition: { type: 'spring', duration: 2 },
           }}
-          transition={{ type: 'spring' }}
-          whileHover={{
-            scale: 1.1,
-          }}
+          viewport={{ once: true }}
         >
-          I grew up in Edmonton, Alberta, surrounded by the sprawling landscapes
-          of Western Canada. It wasn't until I reached the age of 38 that I
-          stumbled upon the captivating world of coding. This discovery marked a
-          significant turning point in my life, leading me down a path filled
-          with endless possibilities and exciting opportunities in the realm of
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.5, rotate: 360 }}
+          >
+            <ImageSlider imageAssets={imageAssets} />
+          </motion.div>
+        </motion.div>
+
+        <motion.p
+          className="text-slate-200 flex flex-col justify-start overflow-x-hidden md:w-2/3 p-4 mt-4"
+          initial={{ opacity: 0, x: 500 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 3, type: 'spring' },
+          }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.1 }}
+        >
+          Living in close proximity to the majestic Rockies has always been a
+          cherished aspect of my life. Hailing from Edmonton, Alberta, nestled
+          amidst the vast expanses of Western Canada, I found myself immersed in
+          the breathtaking beauty of nature. However, it wasn't until I reached
+          the age of 38 that I serendipitously ventured into the realm of
+          coding, embarking on a transformative journey filled with boundless
+          potential and exhilarating prospects in the ever-evolving landscape of
           technology.
           <br className="mt-3" />
           As a self-learner, I've embarked on a journey of exploration and

@@ -68,6 +68,7 @@ export default function Skills() {
           y: 0,
           transition: { type: 'spring', duration: 2 },
         }}
+        viewport={{ once: true }}
         whileTap={{ rotate: 360 }}
       >
         Skills and Experience

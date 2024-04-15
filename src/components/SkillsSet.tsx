@@ -27,42 +27,44 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
         >
           <motion.span
             className="inline-block px-2 py-1 font-semibold text-white gradient-bg rounded-md"
-            initial={{ opacity: 0, x: -200, y: -300 }}
-            animate={{
+            initial={{ opacity: 1, scale: 9.0 }}
+            whileInView={{
               opacity: 1,
-              x: 0,
-              y: 0,
               rotate: 720,
+              scale: 1.0,
+              transition: { duration: 5, type: 'spring' },
             }}
-            transition={{ type: 'spring' }}
-            whileHover={{ rotate: 360, scale: 1.5 }}
+            viewport={{ once: true }}
+            whileHover={{ rotate: 360, scale: 2.5 }}
           >
             {year}
           </motion.span>
 
           <motion.span
             className=" font-nunito text-lg font-semibold text-white"
-            initial={{ opacity: 0, x: -500, y: 0 }}
-            animate={{
+            initial={{ opacity: 0, x: 0, y: 0, scale: 0.1 }}
+            whileInView={{
               opacity: 1,
               x: 0,
               y: 0,
+              scale: 1.0,
+              transition: { duration: 3, type: 'spring' },
             }}
-            transition={{ type: 'spring' }}
-            whileTap={{ rotate: 360 }}
+            viewport={{ once: true }}
           >
             {title}
           </motion.span>
 
           <motion.span
             className="my-1 text-sm font-normal leading-none text-white"
-            initial={{ opacity: 0, x: 500, y: 0 }}
-            animate={{
+            initial={{ opacity: 0, x: 0, y: -200 }}
+            whileInView={{
               opacity: 1,
               x: 0,
               y: 0,
-              transition: { type: 'spring' },
+              transition: { duration: 3, type: 'spring' },
             }}
+            viewport={{ once: true }}
           >
             {duration}
           </motion.span>
@@ -77,6 +79,7 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
             y: 0,
             transition: { type: 'spring', duration: 2 },
           }}
+          viewport={{ once: true }}
           whileHover={{
             scale: 1.05,
           }}

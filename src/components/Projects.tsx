@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="bg-black border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
+      className="gradient-bg3 border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
     >
       <motion.h1
         className="text-4xl font-nunito font-bold text-center text-white"
@@ -15,9 +15,9 @@ export default function Projects() {
           opacity: 1,
           x: 0,
           y: 0,
-          transition: { type: 'spring' },
+          transition: { duration: 3, type: 'spring' },
         }}
-        transition={{ type: 'spring' }}
+        viewport={{ once: true }}
         whileTap={{ rotate: 360 }}
       >
         Projects
@@ -30,8 +30,9 @@ export default function Projects() {
           opacity: 1,
           x: 0,
           y: 0,
-          transition: { type: 'spring' },
+          transition: { duration: 3, type: 'spring' },
         }}
+        viewport={{ once: true }}
         whileHover={{ scale: 1.05 }}
       >
         Utilizing my skill set and approach, I've applied these principles to
@@ -44,14 +45,22 @@ export default function Projects() {
         UI/UX experiences.
       </motion.p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols gap-12">
+      <motion.div className="grid sm:grid-cols-2 lg:grid-cols gap-12"
+       initial={{ opacity: 0, x: 0, y: 200 }}
+       whileInView={{
+         opacity: 1,
+         x: 0,
+         y: 0,
+         transition: { duration: 3, type: 'spring' },
+       }}
+       viewport={{ once: true }}>
         <ProjectItem
           img={burgerWebsiteImg}
           title="Burger Restaurant Website Layout"
           link="/"
         />
         {/*add another ProjectItem component here */}
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -5,6 +5,10 @@
 * {
   scroll-behavior: smooth;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 @keyframes glow {
   0% {
@@ -43,23 +47,23 @@
 @keyframes shape2 {
   0% {
     box-shadow: 0 0 14px 5px hsl(286, 69%, 51%);
-    border-radius: 100%; /* Top left, top right, bottom right, bottom left */
+    border-radius: 100%;
   }
   12.5% {
     box-shadow: 0 0 12px 5px hsl(240, 65%, 51%);
-    border-radius: 35% 5% 25% 15%;
+    border-radius: 3% 42% 6% 39%;
   }
   25% {
     box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
-    border-radius: 45% 25% 35% 15%;
+    border-radius: 41% 94% 37% 63%;
   }
   37.5% {
     box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
-    border-radius: 55% 35% 45% 25%;
+    border-radius: 75% 25% 85% 35%;
   }
   50% {
     box-shadow: 0 0 14px 5px hsl(166, 64%, 43%);
-    border-radius: 20% 50% 10% 40%;
+    border-radius: 27% 56% 12% 86%;
   }
   62.5% {
     box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
@@ -67,12 +71,15 @@
   }
   75% {
     box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
+    border-radius: 25% 65% 5% 35%;
   }
   87.5% {
     box-shadow: 0 0 12px 5px hsl(240, 65%, 51%);
+    border-radius: 5% 55% 65% 35%;
   }
   100% {
     box-shadow: 0 0 14px 5px hsl(286, 69%, 51%);
+    border-radius: 100%;
   }
 }
 
@@ -80,19 +87,11 @@
   animation: shape2 5s ease-in-out infinite;
 }
 
-.gradient-bg {
-  background: linear-gradient(
-    to bottom right,
-    rgb(10, 109, 231),
-    rgb(87, 124, 169)
-  );
-}
-
 .text-gr {
   background: linear-gradient(
     to bottom right,
-    rgb(10, 109, 231),
-    rgb(87, 124, 169)
+    rgb(59, 159, 210),
+    rgb(178, 214, 243)
   );
 
   background-clip: text;
@@ -114,10 +113,30 @@
     to bottom right,
     rgb(10, 109, 231),
     rgb(87, 124, 169)
-  ); 
-  background-clip: padding-box; 
+  );
+  background-clip: padding-box;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    to bottom right,
+    rgb(19, 64, 91),
+    rgb(73, 118, 146)
+  );
 }
 
 .gradient-bg2 {
-  background: linear-gradient(45deg, #a66cb9, #5e106c);
+  background: linear-gradient(-145deg, rgb(87, 124, 169), rgb(39, 33, 116));
+}
+.gradient-bg3 {
+  background: linear-gradient(145deg, rgb(39, 33, 116), rgb(13, 11, 38));
+}
+.grad-bg4 {
+  background: linear-gradient(145deg, hsl(217, 75%, 29%), hsl(194, 66%, 49%));
+}
+
+.custom {
+  background-image: url('/bg3.jpg');
+  background-size: cover;
+  background-position: center;
 }
