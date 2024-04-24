@@ -30,10 +30,10 @@ const About: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-center">
         <motion.div
           className="w-full md:w-2/4 rounded-lg p-2 flex justify-center"
-          initial={{ opacity: 0, x: -400 }}
+          initial={{ opacity: 0, scale: 0.0 }}
           whileInView={{
             opacity: 1,
-            x: 0,
+             scale: 1.0,
             rotate: 720,
             transition: { type: 'spring', duration: 2 },
           }}
@@ -41,7 +41,7 @@ const About: React.FC = () => {
         >
           <motion.div
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.5, rotate: 360 }}
+            whileTap={{ scale: 0.5, rotate: 360, opacity: 0 }}
           >
             <ImageSlider imageAssets={imageAssets} />
           </motion.div>
@@ -58,26 +58,20 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           whileHover={{ scale: 1.1 }}
         >
-          Living in close proximity to the majestic Rockies has always been a
-          cherished aspect of my life. Hailing from Edmonton, Alberta, nestled
-          amidst the vast expanses of Western Canada, I found myself immersed in
-          the breathtaking beauty of nature. However, it wasn't until I reached
-          the age of 38 that I serendipitously ventured into the realm of
-          coding, embarking on a transformative journey filled with boundless
-          potential and exhilarating prospects in the ever-evolving landscape of
-          technology.
+          Growing up in Edmonton, Alberta, amidst the sweeping landscapes of
+          Western Canada, I've always been fortunate to live close by the
+          awe-inspiring beauty of the Canadian Rockies. I've particularly
+          enjoyed summer trips to pristine locations like Jasper and Banff.
           <br className="mt-3" />
-          As a self-learner, I've embarked on a journey of exploration and
-          discovery in the field of coding. While I may still be new to this
-          fascinating domain, my enthusiasm and determination to learn are
-          boundless. Each coding challenge I encounter is an opportunity for
-          growth, and I approach every obstacle with a willingness to learn and
-          adapt.
+          It wasn't until I turned 38 that I stumbled upon the world of coding,
+          embarking on a transformative journey brimming with endless
+          possibilities and exciting opportunities in technology. As a
+          self-taught coder, I've delved into the realm of coding with boundless
+          enthusiasm and determination, embracing each challenge as an
+          opportunity for growth and adaptation.
           <br className="mt-3" />
-          Despite being at the beginning of my coding journey, I am eager to
-          absorb knowledge, tackle new challenges, and collaborate with fellow
-          developers to expand my skills and contribute meaningfully to the
-          ever-evolving world of technology.
+          Beyond coding, I find joy in staying active, indulging in culinary
+          adventures, and immersing myself in the world of video games.
         </motion.p>
       </div>
     </div>

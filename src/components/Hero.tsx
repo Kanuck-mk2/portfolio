@@ -1,5 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import {
+  dragAnimation,
+  hoverAnimation,
+  imageAnimation,
+  textAnimation,
+  textAnimation2,
+} from '../constants/animations';
 
 const Hero = () => {
   return (
@@ -17,41 +24,56 @@ const Hero = () => {
               src="./profile/shawn-profile2.webp"
               alt="Profile Picture"
               className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer z-[500]"
-              initial={{ opacity: 0, x: 100, y: -200 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              whileInView={{ opacity: 1, rotate: 720 }}
-              transition={{ duration: 3, type: 'spring' }}
-              whileHover={{ scale: 1.2, rotate: 360 }}
-              drag
-              dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-              dragTransition={{ bounceStiffness: 500, bounceDamping: 10 }}
+              initial={imageAnimation.initial}
+              animate={imageAnimation.animate}
+              whileInView={imageAnimation.whileInView}
+              transition={imageAnimation.transition}
+              whileHover={hoverAnimation}
+              {...dragAnimation}
             />
 
             <div className="flex flex-col justify-center items-center">
-              <motion.div className="flex flex-row justify-center" whileHover={{ scale: 1.2 }}>
+              <motion.div
+                className="flex flex-row justify-center"
+                whileHover={{ scale: 1.2 }}
+              >
                 <motion.h1
                   className="font-nunito font-bold sm:text-5xl text-4xl text-gr mr-2 z-[499]"
-                  initial={{ opacity: 0, x: 0, y: 500 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ duration: 4, type: 'spring' }}
+                  initial={textAnimation.initial}
+                  animate={textAnimation.animate}
+                  transition={textAnimation.transition}
                 >
                   Chad
                 </motion.h1>
 
                 <motion.h1
                   className="font-nunito font-bold sm:text-5xl text-4xl text-gr z-[499]"
-                  initial={{ opacity: 0, x: 0, y: -500 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  transition={{ duration: 4, type: 'spring' }}
+                  initial={textAnimation2.initial}
+                  animate={textAnimation2.animate}
+                  transition={textAnimation2.transition}
                 >
                   Parenteau
                 </motion.h1>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, x: 500, y: 0 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ duration: 4, type: 'spring' }}>
-                <motion.h2 className="flex sm:text-3xl text-2xl pt-4 mr-2 text-white" whileHover={{ scale: 1.2, rotate: 360 }}>
+              <motion.div
+                initial={{ opacity: 0, x: 500, y: 0 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 4, type: 'spring' }}
+              >
+                <motion.h2
+                  className="flex sm:text-3xl text-2xl pt-4 mr-2 text-white"
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                >
                   <TypeAnimation
-                    sequence={['Web Developer', 2000, 'Designer', 2000, 'Code and Tech Enthusiast', 2000]}
+                    sequence={[
+                      'Web Developer',
+                      2000,
+                      'Designer',
+                      2000,
+                      'Code and Tech Enthusiast',
+                      2000,
+                    ]}
                     wrapper="span"
                     speed={50}
                     style={{ fontSize: '1em', paddingLeft: '5px' }}
@@ -101,7 +123,7 @@ const Hero = () => {
                 </motion.a>
                 <motion.a
                   title="Instagram"
-                  href="/"
+                  href="https://www.instagram.com/chad.parenteau2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glow-border rounded-full "
