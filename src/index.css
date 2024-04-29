@@ -55,7 +55,7 @@ body {
   }
   25% {
     box-shadow: 0 0 14px 5px hsl(194, 66%, 51%);
-    border-radius: 41% 94% 37% 63%;
+    border-radius: 41% 94% 7% 63%;
   }
   37.5% {
     box-shadow: 0 0 12px 5px hsl(170, 65%, 47%);
