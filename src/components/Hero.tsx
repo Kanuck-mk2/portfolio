@@ -2,8 +2,11 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import {
   dragAnimation,
+  gitAnimation,
   hoverAnimation,
   imageAnimation,
+  instaAnimation,
+  linkAnimation,
   textAnimation,
   textAnimation2,
 } from '../constants/animations';
@@ -57,9 +60,10 @@ const Hero = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 500, y: 0 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 4, type: 'spring' }}
+                initial={imageAnimation.initial}
+                animate={imageAnimation.animate}
+                whileInView={imageAnimation.whileInView}
+                transition={imageAnimation.transition}
               >
                 <motion.h2
                   className="flex sm:text-3xl text-2xl pt-4 mr-2 text-white"
@@ -83,62 +87,63 @@ const Hero = () => {
               </motion.div>
 
               <div className="flex justify-between lg:items-center pt-6 max-w-[300px] w-full">
-                <motion.a
-                  title="/"
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glow-border rounded-full "
-                  initial={{ opacity: 0, x: 500, y: -500 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  whileInView={{ opacity: 1, x: 0, y: 0, rotate: 720 }}
-                  transition={{ duration: 5, type: 'spring' }}
-                >
-                  <motion.img
-                    title="LinkedIn"
-                    src="/link.png"
-                    alt="LinkedIn"
-                    className="cursor-pointer w-10 h-10"
-                    whileHover={{ scale: 1.1, rotate: 1080 }}
-                  />
-                </motion.a>
+              <motion.a
+        title="/"
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="glow-border rounded-full "
+        initial={linkAnimation.initial}
+        animate={linkAnimation.animate}
+        whileInView={linkAnimation.whileInView}
+        transition={linkAnimation.transition}
+      >
+        <motion.img
+          title="LinkedIn"
+          src="/link.png"
+          alt="LinkedIn"
+          className="cursor-pointer w-10 h-10"
+          whileHover={{ scale: 1.1, rotate: 1080 }}
+        />
+      </motion.a>
 
-                <motion.a
-                  title="GitHub"
-                  href="https://github.com/Kanuck-mk2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glow-border rounded-full"
-                  initial={{ opacity: 0, x: -500, y: 500 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  whileInView={{ opacity: 1, x: 0, y: 0, rotate: -720 }}
-                  transition={{ duration: 3, type: 'spring' }}
-                >
-                  <motion.img
-                    src="/git.png"
-                    alt="GitHub"
-                    className="cursor-pointer w-10 h-10"
-                    whileHover={{ scale: 1.1, rotate: -1080 }}
-                  />
-                </motion.a>
-                <motion.a
-                  title="Instagram"
-                  href="https://www.instagram.com/chad.parenteau2/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glow-border rounded-full "
-                  initial={{ opacity: 0, x: -500, y: -500 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  whileInView={{ opacity: 1, x: 0, y: 0, rotate: 720 }}
-                  transition={{ duration: 4, type: 'spring' }}
-                >
-                  <motion.img
-                    src="/insta.png"
-                    alt="Instagram"
-                    className="cursor-pointer w-10 h-10"
-                    whileHover={{ scale: 1.1, rotate: 1080 }}
-                  />
-                </motion.a>
+      <motion.a
+        title="GitHub"
+        href="https://github.com/Kanuck-mk2"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="glow-border rounded-full"
+        initial={gitAnimation.initial}
+        animate={gitAnimation.animate}
+        whileInView={gitAnimation.whileInView}
+        transition={gitAnimation.transition}
+      >
+        <motion.img
+          src="/git.png"
+          alt="GitHub"
+          className="cursor-pointer w-10 h-10"
+          whileHover={{ scale: 1.1, rotate: -1080 }}
+        />
+      </motion.a>
+
+      <motion.a
+        title="Instagram"
+        href="https://www.instagram.com/chad.parenteau2/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="glow-border rounded-full "
+        initial={instaAnimation.initial}
+        animate={instaAnimation.animate}
+        whileInView={instaAnimation.whileInView}
+        transition={instaAnimation.transition}
+      >
+        <motion.img
+          src="/insta.png"
+          alt="Instagram"
+          className="cursor-pointer w-10 h-10"
+          whileHover={{ scale: 1.1, rotate: 1080 }}
+        />
+      </motion.a>
               </div>
             </div>
           </div>
