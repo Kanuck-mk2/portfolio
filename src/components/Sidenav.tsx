@@ -8,6 +8,12 @@ import {
 } from 'react-icons/ai';
 import { BsPerson } from 'react-icons/bs';
 import { GrProjects } from 'react-icons/gr';
+import {
+  aboutAnimation,
+  homeAnimation,
+  navMenuAnimation,
+  navMenuItemAnimation,
+} from '../constants/animations';
 
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
@@ -26,9 +32,7 @@ export default function Sidenav() {
     <div>
       <motion.div
         className="fixed top-4 right-4 md:hidden text-white z-[999]"
-        initial={{ opacity: 1, x: 100, y: 0, rotate: 360, scale: 4.0 }}
-        animate={{ opacity: 1, x: 0, y: 0, scale: 1.0 }}
-        whileTap={{ rotate: 720 }}
+        {...navMenuAnimation}
       >
         <AiOutlineMenu onClick={handleNav} size={25} />
       </motion.div>
@@ -42,13 +46,7 @@ export default function Sidenav() {
                 key={index}
                 href={`#${label.toLowerCase()}`}
                 className="w-[75%] flex justify-center items-center rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border border-2 border-sky-500"
-                initial={{ opacity: 0, x: index % 2 === 0 ? 300 : -300, y: 0 }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                  y: 0,
-                  transition: { duration: 2, type: 'spring' },
-                }}
+                {...navMenuItemAnimation(index)}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.5 }}
                 onClick={handleLinkClick}
@@ -72,14 +70,7 @@ export default function Sidenav() {
           <motion.a
             href="#home"
             className="rounded-full  text-white bg-black m-2 p-4 cursor-pointer  glow-border"
-            initial={{ opacity: 0, x: -500, y: 300 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-              rotate: 720,
-            }}
-            transition={{ duration: 4, type: 'spring' }}
+            {...homeAnimation}
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: 360 }}
@@ -91,15 +82,7 @@ export default function Sidenav() {
           <motion.a
             href="#about"
             className="rounded-full   text-white grad-bg4 m-2 p-4 cursor-pointer   glow-border"
-            initial={{ opacity: 0, x: 500, y: 300 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-              rotate: 720,
-            }}
-            transition={{ duration: 4, type: 'spring' }}
-            whileHover={{ scale: 1.1 }}
+            {...aboutAnimation}
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: 360 }}
