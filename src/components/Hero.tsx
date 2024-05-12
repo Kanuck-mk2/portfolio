@@ -20,7 +20,7 @@ const Hero = () => {
       <img
         className="w-full h-screen object-cover object-left"
         alt="background"
-        src="/bg3.jpg"
+        src="/bg1.jpeg"
       />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
@@ -44,7 +44,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.2 }}
               >
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-gr mr-2 z-[499]"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-sky-700 mr-2 z-[499]"
                   initial={textAnimation.initial}
                   animate={textAnimation.animate}
                   transition={textAnimation.transition}
@@ -53,7 +53,7 @@ const Hero = () => {
                 </motion.h1>
 
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-gr z-[499]"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-sky-700 z-[499]"
                   initial={textAnimation2.initial}
                   animate={textAnimation2.animate}
                   transition={textAnimation2.transition}
