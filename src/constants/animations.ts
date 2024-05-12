@@ -1,5 +1,7 @@
 // animations.ts
 
+//////////////////*hero animations*///////////////////////
+
 export const imageAnimation = {
   initial: { opacity: 0, x: 100, y: -200 },
   animate: { opacity: 1, x: 0, y: 0 },
@@ -50,6 +52,9 @@ export const instaAnimation = {
   whileInView: { opacity: 1, x: 0, y: 0, rotate: 720 },
   transition: { duration: 4, type: 'spring' },
 };
+
+///////////////////////*navbar animations*///////////////////////////
+
 export const navMenuAnimation = {
   initial: { opacity: 1, x: 100, y: 0, rotate: 360, scale: 4.0 },
   animate: { opacity: 1, x: 0, y: 0, scale: 1.0 },
@@ -85,4 +90,30 @@ export const aboutAnimation = {
   animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
   transition: { duration: 4, type: 'spring' },
   whileHover: { scale: 1.1 },
+};
+
+export const skillsAnimation = {
+  initial: { opacity: 0, x: 500, y: -300 },
+  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
+  transition: { duration: 4, type: 'spring' },
+  whileHover: { scale: 1.1 },
+};
+
+export const projectsAnimations = {
+  initial: { opacity: 0, x: -500, y: -300 },
+  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
+  transition: { duration: 4, type: 'spring' },
+  whileHover: { scale: 1.1 },
+};
+
+export const contactAnimation = {
+  initial: { opacity: 0, x: 500, y: 300 },
+  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
+  transition: { duration: 4, type: 'spring' },
+  whileHover: { scale: 1.1 },
+};
+
+export const hoverTap = {
+  whileHover: { scale: 1.1, rotate: 360 },
+  whileTap: { scale: 0.5 },
 };
