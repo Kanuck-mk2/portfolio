@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ImageSlider from './ImageSlider';
+import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 
 const About: React.FC = () => {
   const imageAssets: string[] = [
@@ -15,14 +16,7 @@ const About: React.FC = () => {
     <div id="about" className="border-2 w-full m-auto py-16 gradient-bg">
       <motion.h1
         className="font-nunito font-bold text-4xl text-center text-white mt-10 mb-5"
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 3, type: 'spring' },
-        }}
-        viewport={{ once: true }}
-        whileTap={{ rotate: 360 }}
+        {...aboutTitle}
       >
         My Story
       </motion.h1>
@@ -30,14 +24,7 @@ const About: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-center">
         <motion.div
           className="w-full md:w-2/4 rounded-lg p-2 flex justify-center"
-          initial={{ opacity: 0, scale: 0.0 }}
-          whileInView={{
-            opacity: 1,
-             scale: 1.0,
-            rotate: 720,
-            transition: { type: 'spring', duration: 2 },
-          }}
-          viewport={{ once: true }}
+          {...aboutImage}
         >
           <motion.div
             whileHover={{ scale: 1.1 }}
@@ -49,14 +36,7 @@ const About: React.FC = () => {
 
         <motion.p
           className="text-slate-200 flex flex-col justify-start overflow-x-hidden md:w-2/3 p-4 mt-4"
-          initial={{ opacity: 0, x: 500 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 3, type: 'spring' },
-          }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.1 }}
+          {...aboutText}
         >
           Growing up in Edmonton, Alberta, amidst the sweeping landscapes of
           Western Canada, I've always been fortunate to live close by the

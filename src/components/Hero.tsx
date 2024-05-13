@@ -13,6 +13,7 @@ import {
 import { useState } from 'react';
 
 const Hero = () => {
+
   const [textColor, setTextColor] = useState('aqua');
 
   return (
@@ -44,7 +45,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.2 }}
               >
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-sky-700 mr-2 z-[499]"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 mr-2 z-[499]"
                   initial={textAnimation.initial}
                   animate={textAnimation.animate}
                   transition={textAnimation.transition}
@@ -53,7 +54,7 @@ const Hero = () => {
                 </motion.h1>
 
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-sky-700 z-[499]"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 z-[499]"
                   initial={textAnimation2.initial}
                   animate={textAnimation2.animate}
                   transition={textAnimation2.transition}
