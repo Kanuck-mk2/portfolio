@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import {
   dragAnimation,
   gitAnimation,
-  hoverAnimation,
   imageAnimation,
   instaAnimation,
   linkAnimation,
@@ -13,7 +12,6 @@ import {
 import { useState } from 'react';
 
 const Hero = () => {
-
   const [textColor, setTextColor] = useState('aqua');
 
   return (
@@ -27,17 +25,14 @@ const Hero = () => {
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="max-w-[750px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
           <div className="flex flex-col justify-center items-center lg:flex-row-reverse">
-            <motion.img
-              src="./profile/shawn-profile2.webp"
-              alt="Profile Picture"
-              className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer z-[500]"
-              initial={imageAnimation.initial}
-              animate={imageAnimation.animate}
-              whileInView={imageAnimation.whileInView}
-              transition={imageAnimation.transition}
-              whileHover={hoverAnimation}
-              {...dragAnimation}
-            />
+            <motion.div {...imageAnimation} whileHover={{ scale: 1.2 }}>
+              <motion.img
+                src="./profile/shawn-profile2.webp"
+                alt="Profile Picture"
+                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer z-[500] "
+                {...dragAnimation}
+              />
+            </motion.div>
 
             <div className="flex flex-col justify-center items-center">
               <motion.div
@@ -46,31 +41,25 @@ const Hero = () => {
               >
                 <motion.h1
                   className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 mr-2 z-[499]"
-                  initial={textAnimation.initial}
-                  animate={textAnimation.animate}
-                  transition={textAnimation.transition}
+                  {...textAnimation}
                 >
                   Chad
                 </motion.h1>
 
                 <motion.h1
                   className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 z-[499]"
-                  initial={textAnimation2.initial}
-                  animate={textAnimation2.animate}
-                  transition={textAnimation2.transition}
+                  {...textAnimation2}
                 >
                   Parenteau
                 </motion.h1>
               </motion.div>
 
               <motion.div
-                initial={textAnimation.initial}
-                animate={textAnimation.animate}
-                transition={textAnimation.transition}
                 style={{
                   fontSize: '35px',
                   color: textColor,
                 }}
+                {...textAnimation}
               >
                 <motion.h2
                   className="flex sm:text-3xl text-2xl pt-4 mr-2 "
@@ -103,10 +92,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glow-border rounded-full "
-                  initial={linkAnimation.initial}
-                  animate={linkAnimation.animate}
-                  whileInView={linkAnimation.whileInView}
-                  transition={linkAnimation.transition}
+                  {...linkAnimation}
                 >
                   <motion.img
                     title="LinkedIn"
@@ -123,10 +109,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glow-border rounded-full"
-                  initial={gitAnimation.initial}
-                  animate={gitAnimation.animate}
-                  whileInView={gitAnimation.whileInView}
-                  transition={gitAnimation.transition}
+                  {...gitAnimation}
                 >
                   <motion.img
                     src="/git.png"
@@ -142,10 +125,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glow-border rounded-full "
-                  initial={instaAnimation.initial}
-                  animate={instaAnimation.animate}
-                  whileInView={instaAnimation.whileInView}
-                  transition={instaAnimation.transition}
+                  {...instaAnimation}
                 >
                   <motion.img
                     src="/insta.png"

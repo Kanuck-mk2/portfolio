@@ -1,5 +1,7 @@
+import { skillTitle } from '../constants/animations';
 import SkillsSet from './SkillsSet';
 import { motion } from 'framer-motion';
+
 
 interface SkillData {
   year: string;
@@ -61,15 +63,7 @@ export default function Skills() {
     >
       <motion.h1
         className="text-4xl p-4 font-nunito font-bold text-center text-white"
-        initial={{ opacity: 0, x: 0, y: 300 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          y: 0,
-          transition: { type: 'spring', duration: 2 },
-        }}
-        viewport={{ once: true }}
-        whileTap={{ rotate: 360 }}
+        {...skillTitle}
       >
         Skills and Experience
       </motion.h1>

@@ -18,7 +18,6 @@ import {
   skillsAnimation,
 } from '../constants/animations';
 
-
 import NavItem from './navItem';
 
 export default function Sidenav() {
@@ -59,54 +58,52 @@ export default function Sidenav() {
         </div>
       )}
 
-      <div className="md:block hidden fixed top-[25%] z-[999]">
-        <div className="flex flex-col">
-          <motion.a
-            href="#home"
-            className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-            {...homeAnimation}
-          >
-            <motion.div {...hoverTap}>
-              <AiOutlineHome size={25} />
-            </motion.div>
-          </motion.a>
-          <motion.a
-            href="#about"
-            className="rounded-full text-white grad-bg4 m-2 p-4 cursor-pointer glow-border"
-            {...aboutAnimation}
-          >
-            <motion.div {...hoverTap}>
-              <BsPerson size={25} />
-            </motion.div>
-          </motion.a>
-          <motion.a
-            href="#skills"
-            className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-            {...skillsAnimation}
-          >
-            <motion.div {...hoverTap}>
-              <GrProjects size={25} />
-            </motion.div>
-          </motion.a>
-          <motion.a
-            href="#projects"
-            className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-            {...projectsAnimations}
-          >
-            <motion.div {...hoverTap}>
-              <AiOutlineProject size={25} />
-            </motion.div>
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-            {...contactAnimation}
-          >
-            <motion.div {...hoverTap}>
-              <AiOutlineMail size={25} />
-            </motion.div>
-          </motion.a>
-        </div>
+      <div className="md:flex md:flex-row md:justify-center md:items-center md:top-0 md:w-full md:h-16 md:bg-gray-800 md:text-white md:text-xl md:font-bold fixed z-50">
+        <motion.a
+          href="#home"
+          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
+          {...homeAnimation}
+        >
+          <motion.div {...hoverTap}>
+            <AiOutlineHome size={25} />
+          </motion.div>
+        </motion.a>
+        <motion.a
+          href="#about"
+          className="rounded-full text-white grad-bg4 m-2 p-4 cursor-pointer glow-border"
+          {...aboutAnimation}
+        >
+          <motion.div {...hoverTap}>
+            <BsPerson size={25} />
+          </motion.div>
+        </motion.a>
+        <motion.a
+          href="#skills"
+          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
+          {...skillsAnimation}
+        >
+          <motion.div {...hoverTap}>
+            <GrProjects size={25} />
+          </motion.div>
+        </motion.a>
+        <motion.a
+          href="#projects"
+          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
+          {...projectsAnimations}
+        >
+          <motion.div {...hoverTap}>
+            <AiOutlineProject size={25} />
+          </motion.div>
+        </motion.a>
+        <motion.a
+          href="#contact"
+          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
+          {...contactAnimation}
+        >
+          <motion.div {...hoverTap}>
+            <AiOutlineMail size={25} />
+          </motion.div>
+        </motion.a>
       </div>
     </div>
   );

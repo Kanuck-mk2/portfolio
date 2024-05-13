@@ -73,10 +73,6 @@ export const imageAnimation = {
   whileInView: { opacity: 1, rotate: 720 },
   transition: { duration: 3, type: 'spring' },
 };
-export const hoverAnimation = {
-  scale: 1.2,
-  rotate: 360,
-};
 
 export const dragAnimation = {
   drag: true,
@@ -151,4 +147,18 @@ export const aboutText = {
   },
   viewport: { once: true },
   whileHover: { scale: 1.1 },
+};
+
+///////////////////*Skills animations*///////////
+
+export const skillTitle = {
+  initial: { opacity: 0, x: 0, y: 300 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { type: 'spring', duration: 2 },
+  },
+  viewport: { once: true },
+  whileTap: { rotate: 360 },
 };
