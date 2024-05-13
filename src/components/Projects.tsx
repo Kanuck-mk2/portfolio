@@ -1,6 +1,7 @@
 import ProjectItem from './ProjectItem';
 import burgerWebsiteImg from '../assets/burger-website.png';
 import { motion } from 'framer-motion';
+import { projectTitle } from '../constants/animations';
 
 export default function Projects() {
   return (
@@ -10,15 +11,7 @@ export default function Projects() {
     >
       <motion.h1
         className="text-4xl font-nunito font-bold text-center text-white"
-        initial={{ opacity: 0, x: -500, y: 0 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          y: 0,
-          transition: { duration: 3, type: 'spring' },
-        }}
-        viewport={{ once: true }}
-        whileTap={{ rotate: 360 }}
+        {...projectTitle}
       >
         Projects
       </motion.h1>
@@ -45,15 +38,17 @@ export default function Projects() {
         UI/UX experiences.
       </motion.p>
 
-      <motion.div className="grid sm:grid-cols-2 lg:grid-cols gap-12"
-       initial={{ opacity: 0, x: 0, y: 200 }}
-       whileInView={{
-         opacity: 1,
-         x: 0,
-         y: 0,
-         transition: { duration: 3, type: 'spring' },
-       }}
-       viewport={{ once: true }}>
+      <motion.div
+        className="grid sm:grid-cols-2 lg:grid-cols gap-12"
+        initial={{ opacity: 0, x: 0, y: 200 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          y: 0,
+          transition: { duration: 3, type: 'spring' },
+        }}
+        viewport={{ once: true }}
+      >
         <ProjectItem
           img={burgerWebsiteImg}
           title="Burger Restaurant Website Layout"

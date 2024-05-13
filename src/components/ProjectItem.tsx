@@ -1,4 +1,5 @@
-import { motion, Transition, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { projectTransition, projectVariants, projectHoverTap } from '../constants/animations';
 
 interface ProjectItemProps {
   img: string;
@@ -6,31 +7,16 @@ interface ProjectItemProps {
   link: string;
 }
 
-const transition: Transition = {
-  duration: 3,
-  type: 'spring',
-};
-
-const variants: Variants = {
-  initial: { opacity: 0, x: 0, y: -500 },
-  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
-};
-
-const customHoverVariants: Variants = {
-  hover: { y: -30, rotate: -10 },
-};
-
 const ProjectItem: React.FC<ProjectItemProps> = ({ img, title, link }) => {
   return (
     <motion.div
       initial="initial"
       animate="animate"
-      whileHover="hover"
-      variants={variants}
-      transition={transition}
+      {...projectVariants}
+      transition={projectTransition}
     >
-      <motion.div variants={customHoverVariants} whileTap={{ scale: 0.5 }}>
-        <div className="relative flex  items-center justify-center h-auto w-full glow-border rounded-xl group hover:bg-black bg-opacity-100">
+      <motion.div {...projectHoverTap}>
+        <div className="relative flex items-center justify-center h-auto w-full glow-border rounded-xl group hover:bg-black bg-opacity-100">
           <img
             src={img}
             alt="Portfolio Project"

@@ -58,7 +58,7 @@ export default function Sidenav() {
         </div>
       )}
 
-      <div className="md:flex md:flex-row md:justify-center md:items-center md:top-0 md:w-full md:h-16 md:bg-gray-800 md:text-white md:text-xl md:font-bold fixed z-50">
+      <div className="flex flex-row justify-center items-center top-0 w-full h-16 bg-gray-800/50 text-white text-xl font-bold md:hidden fixed z-[999]">
         <motion.a
           href="#home"
           className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"

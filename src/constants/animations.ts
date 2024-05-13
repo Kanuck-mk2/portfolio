@@ -1,4 +1,4 @@
-// animations.ts
+import { Transition, Variants } from 'framer-motion';
 
 ///////////////////////*navbar animations*///////////////////////////
 
@@ -65,7 +65,7 @@ export const hoverTap = {
   whileTap: { scale: 0.5 },
 };
 
-//////////////////*hero animations*///////////////////////
+/////////////////////////////////////*hero animations*/////////////////////////////////////////
 
 export const imageAnimation = {
   initial: { opacity: 0, x: 100, y: -200 },
@@ -114,7 +114,7 @@ export const instaAnimation = {
   transition: { duration: 4, type: 'spring' },
 };
 
-//////////////////////*About*////////////////////
+/////////////////////////////////////////////////*About*/////////////////////////////////////////
 
 export const aboutTitle = {
   initial: { opacity: 0, y: -100 },
@@ -149,7 +149,7 @@ export const aboutText = {
   whileHover: { scale: 1.1 },
 };
 
-///////////////////*Skills animations*///////////
+/////////////////////////////////////////////////*Skills animations*/////////////////////////////////////
 
 export const skillTitle = {
   initial: { opacity: 0, x: 0, y: 300 },
@@ -158,6 +158,89 @@ export const skillTitle = {
     x: 0,
     y: 0,
     transition: { type: 'spring', duration: 2 },
+  },
+  viewport: { once: true },
+  whileTap: { rotate: 360 },
+};
+
+export const skillYear = {
+  initial: { opacity: 1, scale: 9.0 },
+  whileInView: {
+    opacity: 1,
+    rotate: 720,
+    scale: 1.0,
+    transition: { duration: 5, type: 'spring' },
+  },
+  viewport: { once: true },
+  whileHover: { rotate: 360, scale: 2.5 },
+};
+
+export const skillTitles = {
+  initial: { opacity: 0, x: 0, y: 0, scale: 0.1 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    scale: 1.0,
+    transition: { duration: 3, type: 'spring' },
+  },
+  viewport: { once: true },
+};
+
+export const skillDuration = {
+  initial: { opacity: 0, x: 0, y: -200 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { duration: 3, type: 'spring' },
+  },
+  viewport: { once: true },
+};
+
+export const skillDetail = {
+  initial: { opacity: 0, x: 500, y: 0 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { type: 'spring', duration: 2 },
+  },
+  viewport: { once: true },
+  whileHover: {
+    scale: 1.05,
+  },
+};
+
+//////////////////////////////////////////////////*project animations*////////////////////////////////
+
+////////// project item card ////////////
+
+export const projectTransition: Transition = {
+  duration: 3,
+  type: 'spring',
+};
+
+export const projectVariants: Variants = {
+  initial: { opacity: 0, x: 0, y: -500 },
+  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
+  whileHover: { y: -30, rotate: -10 },
+};
+
+export const projectHoverTap = {
+  whileHover: { y: -30, rotate: -10 },
+  whileTap: { scale: 0.5 },
+};
+
+////////////Project section/////////////
+
+export const projectTitle = {
+  initial: { opacity: 0, x: -500, y: 0 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { duration: 3, type: 'spring' },
   },
   viewport: { once: true },
   whileTap: { rotate: 360 },

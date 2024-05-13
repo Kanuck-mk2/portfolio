@@ -40,14 +40,14 @@ const Hero = () => {
                 whileHover={{ scale: 1.2 }}
               >
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 mr-2 z-[499]"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 mr-2 z-30"
                   {...textAnimation}
                 >
                   Chad
                 </motion.h1>
 
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 z-[499]"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 z-30"
                   {...textAnimation2}
                 >
                   Parenteau
