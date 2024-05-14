@@ -4,7 +4,7 @@ import NavItem from './navItem';
 import { motion } from 'framer-motion';
 
 import { navLinks } from '../constants';
-import { navLinkVariants } from '../constants/animations';
+import { navLinkVariants, slideDown } from '../constants/animations';
 
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
@@ -40,17 +40,18 @@ export default function Sidenav() {
       )}
 
       <motion.div
-        className="flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/80 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]"
-        initial="hidden"
-        animate="visible"
-        variants={navLinkVariants}
-        transition={{ staggerChildren: 0.3 }} // Adjust the stagger duration as needed
+        className="hidden md:flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/10 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]"
+        {...slideDown}
       >
         {navLinks.map((link, index) => (
           <motion.a
             key={index}
             href={link.href}
-            className="m-2 p-4 cursor-pointer glow-border rounded-full"
+            className="m-2 p-4 cursor-pointer hover:text-sky-400"
+            initial="hidden"
+            animate="visible"
+            variants={navLinkVariants}
+            transition={{ staggerChildren: 0.3 }}
           >
             {link.text}
           </motion.a>

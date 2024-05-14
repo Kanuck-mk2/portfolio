@@ -19,7 +19,7 @@ const Hero = () => {
     <div id="home" className="w-full h-screen relative">
       <motion.div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-transparent to-transparent z-10"
-        style={{ backdropFilter: 'blur(10px)' }}
+        style={{ backdropFilter: 'blur(20px)' }}
         {...glassFade}
       ></motion.div>
       <img
