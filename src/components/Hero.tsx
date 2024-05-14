@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <div id="home" className="w-full h-screen relative">
-        <motion.div
+      <motion.div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-transparent to-transparent z-10"
         style={{ backdropFilter: 'blur(10px)' }}
         {...glassFade}
@@ -37,6 +37,8 @@ const Hero = () => {
                 alt="Profile Picture"
                 className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer "
                 {...dragAnimation}
+                whileHover={{ rotate: 720 }}
+                transition={{ duration: 0.7 }}
               />
             </motion.div>
 
@@ -81,7 +83,7 @@ const Hero = () => {
                       () => setTextColor('fuchsia'),
                       'Code and Tech Enthusiast',
                       2000,
-                      () => setTextColor('violet'),
+                      () => setTextColor('lime'),
                     ]}
                     wrapper="span"
                     speed={50}

@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import NavItem from './navItem';
 import { motion } from 'framer-motion';
-import { navFade } from '../constants/animations';
+
+import { navLinks } from '../constants';
+import { navLinkVariants } from '../constants/animations';
 
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
@@ -39,35 +41,20 @@ export default function Sidenav() {
 
       <motion.div
         className="flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/80 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]"
-        {...navFade}
+        initial="hidden"
+        animate="visible"
+        variants={navLinkVariants}
+        transition={{ staggerChildren: 0.3 }} // Adjust the stagger duration as needed
       >
-        <a href="#home" className="m-2 p-4 cursor-pointer  ">
-          Home
-        </a>
-        <a
-          href="#about"
-          className="m-2 p-4 cursor-pointer glow-border rounded-full"
-        >
-          About
-        </a>
-        <a
-          href="#skills"
-          className="m-2 p-4 cursor-pointer glow-border rounded-full"
-        >
-          Skills
-        </a>
-        <a
-          href="#projects"
-          className="m-2 p-4 cursor-pointer glow-border rounded-full"
-        >
-          Projects
-        </a>
-        <a
-          href="#contact"
-          className="m-2 p-4 cursor-pointer glow-border rounded-full"
-        >
-          Contact
-        </a>
+        {navLinks.map((link, index) => (
+          <motion.a
+            key={index}
+            href={link.href}
+            className="m-2 p-4 cursor-pointer glow-border rounded-full"
+          >
+            {link.text}
+          </motion.a>
+        ))}
       </motion.div>
     </div>
   );

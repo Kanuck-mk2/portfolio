@@ -1,3 +1,13 @@
+export const navLinks = [
+  { href: '#home', text: 'Home' },
+  { href: '#about', text: 'About' },
+  { href: '#skills', text: 'Skills' },
+  { href: '#projects', text: 'Projects' },
+  { href: '#contact', text: 'Contact' },
+];
+
+
+
 export const imageAssets: string[] = [
   './profile/shawnm1.jpg',
   './profile/shawn1.webp',

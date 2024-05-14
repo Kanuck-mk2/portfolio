@@ -6,7 +6,7 @@ export const glassFade = {
   initial: { opacity: 1 },
 
   whileInView: { opacity: 0 },
-  viewport: { once: false },
+  viewport: { once: true },
   transition: { duration: 4 },
 };
 
@@ -18,6 +18,17 @@ export const navFade = {
 };
 
 ///////////////////////*navbar animations*///////////////////////////
+
+export const navLinkVariants = {
+  hidden: { opacity: 0, scale: 0.0 },
+  visible: {
+    opacity: 1,
+    scale: 1.0,
+    transition: {
+      duration: 1.5,
+    },
+  },
+};
 
 export const navMenuAnimation = {
   initial: { opacity: 1, x: 100, y: 0, rotate: 360, scale: 4.0 },
@@ -41,33 +52,6 @@ export const sidenavLinkAnimation = {
   transition: { duration: 4, type: 'spring' },
   whileHover: { scale: 1.1, rotate: 360 },
   whileTap: { scale: 0.5 },
-};
-
-export const homeAnimation = {
-  initial: { opacity: 0, x: -500, y: 300 },
-  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
-  transition: { duration: 4, type: 'spring' },
-};
-
-export const aboutAnimation = {
-  initial: { opacity: 0, x: 500, y: 300 },
-  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
-  transition: { duration: 4, type: 'spring' },
-  whileHover: { scale: 1.1 },
-};
-
-export const skillsAnimation = {
-  initial: { opacity: 0, x: 500, y: -300 },
-  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
-  transition: { duration: 4, type: 'spring' },
-  whileHover: { scale: 1.1 },
-};
-
-export const projectsAnimations = {
-  initial: { opacity: 0, x: -500, y: -300 },
-  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
-  transition: { duration: 4, type: 'spring' },
-  whileHover: { scale: 1.1 },
 };
 
 export const contactAnimation = {
