@@ -222,13 +222,13 @@ export const projectTransition: Transition = {
 };
 
 export const projectVariants: Variants = {
-  initial: { opacity: 0, x: 0, y: -500 },
-  animate: { opacity: 1, x: 0, y: 0, rotate: 720 },
-  whileHover: { y: -30, rotate: -10 },
+  initial: { opacity: 0, x: 0, y: 50 },
+  whileInView: { opacity: 1, x: 0, y: 0, rotate: 720 },
+  
 };
 
 export const projectHoverTap = {
-  whileHover: { y: -30, rotate: -10 },
+  whileHover: { y: -20, rotate: -10 },
   whileTap: { scale: 0.5 },
 };
 
@@ -244,4 +244,27 @@ export const projectTitle = {
   },
   viewport: { once: true },
   whileTap: { rotate: 360 },
+};
+
+export const projectText = {
+  initial: { opacity: 0, x: 500, y: 0 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { duration: 3, type: 'spring' },
+  },
+  viewport: { once: true },
+  whileHover: { scale: 1.05 },
+};
+
+export const projectLayout = {
+  initial: { opacity: 0, x: 0, y: 200 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { duration: 3, type: 'spring' },
+  },
+  viewport: { once: true },
 };

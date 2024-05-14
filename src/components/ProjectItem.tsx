@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
-import { projectTransition, projectVariants, projectHoverTap } from '../constants/animations';
+import {
+  projectTransition,
+  projectVariants,
+  projectHoverTap,
+} from '../constants/animations';
 
 interface ProjectItemProps {
   img: string;
@@ -11,7 +15,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ img, title, link }) => {
   return (
     <motion.div
       initial="initial"
-      animate="animate"
+      whileInView="animate"
+      viewport={{ once: true }}
       {...projectVariants}
       transition={projectTransition}
     >

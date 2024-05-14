@@ -1,23 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  AiOutlineMenu,
-  AiOutlineHome,
-  AiOutlineProject,
-  AiOutlineMail,
-} from 'react-icons/ai';
-import { BsPerson } from 'react-icons/bs';
-import { GrProjects } from 'react-icons/gr';
-import {
-  aboutAnimation,
-  contactAnimation,
-  homeAnimation,
-  hoverTap,
-  navMenuAnimation,
-  projectsAnimations,
-  skillsAnimation,
-} from '../constants/animations';
-
+import { AiOutlineMenu } from 'react-icons/ai';
 import NavItem from './navItem';
 
 export default function Sidenav() {
@@ -35,12 +17,9 @@ export default function Sidenav() {
 
   return (
     <div>
-      <motion.div
-        className="fixed top-4 right-4 md:hidden text-white z-[999]"
-        {...navMenuAnimation}
-      >
+      <div className="fixed top-4 right-4 md:hidden text-white z-[999]">
         <AiOutlineMenu onClick={handleNav} size={25} />
-      </motion.div>
+      </div>
 
       {/* Mobile Navigation Menu */}
       {nav && (
@@ -58,52 +37,37 @@ export default function Sidenav() {
         </div>
       )}
 
-      <div className="flex flex-row justify-center items-center top-0 w-full h-16 bg-gray-800/50 text-white text-xl font-bold md:hidden fixed z-[999]">
-        <motion.a
+      <div className="flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/80 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]">
+        <a
           href="#home"
-          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-          {...homeAnimation}
+          className="m-2 p-4 cursor-pointer  "
         >
-          <motion.div {...hoverTap}>
-            <AiOutlineHome size={25} />
-          </motion.div>
-        </motion.a>
-        <motion.a
+          Home
+        </a>
+        <a
           href="#about"
-          className="rounded-full text-white grad-bg4 m-2 p-4 cursor-pointer glow-border"
-          {...aboutAnimation}
+          className="m-2 p-4 cursor-pointer glow-border rounded-full"
         >
-          <motion.div {...hoverTap}>
-            <BsPerson size={25} />
-          </motion.div>
-        </motion.a>
-        <motion.a
+          About
+        </a>
+        <a
           href="#skills"
-          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-          {...skillsAnimation}
+          className="m-2 p-4 cursor-pointer glow-border rounded-full"
         >
-          <motion.div {...hoverTap}>
-            <GrProjects size={25} />
-          </motion.div>
-        </motion.a>
-        <motion.a
+          Skills
+        </a>
+        <a
           href="#projects"
-          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-          {...projectsAnimations}
+          className="m-2 p-4 cursor-pointer glow-border rounded-full"
         >
-          <motion.div {...hoverTap}>
-            <AiOutlineProject size={25} />
-          </motion.div>
-        </motion.a>
-        <motion.a
+          Projects
+        </a>
+        <a
           href="#contact"
-          className="rounded-full text-white bg-black m-2 p-4 cursor-pointer glow-border"
-          {...contactAnimation}
+          className="m-2 p-4 cursor-pointer glow-border rounded-full"
         >
-          <motion.div {...hoverTap}>
-            <AiOutlineMail size={25} />
-          </motion.div>
-        </motion.a>
+          Contact
+        </a>
       </div>
     </div>
   );

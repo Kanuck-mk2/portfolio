@@ -1,7 +1,11 @@
 import ProjectItem from './ProjectItem';
 import burgerWebsiteImg from '../assets/burger-website.png';
 import { motion } from 'framer-motion';
-import { projectTitle } from '../constants/animations';
+import {
+  projectLayout,
+  projectText,
+  projectTitle,
+} from '../constants/animations';
 
 export default function Projects() {
   return (
@@ -16,18 +20,7 @@ export default function Projects() {
         Projects
       </motion.h1>
 
-      <motion.p
-        className="text-center text-white py-8"
-        initial={{ opacity: 0, x: 500, y: 0 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          y: 0,
-          transition: { duration: 3, type: 'spring' },
-        }}
-        viewport={{ once: true }}
-        whileHover={{ scale: 1.05 }}
-      >
+      <motion.p className="text-center text-white py-8" {...projectText}>
         Utilizing my skill set and approach, I've applied these principles to
         the projects I've created so far. This involves integrating creativity,
         problem-solving, and technical expertise to develop visually trending
@@ -40,14 +33,7 @@ export default function Projects() {
 
       <motion.div
         className="grid sm:grid-cols-2 lg:grid-cols gap-12"
-        initial={{ opacity: 0, x: 0, y: 200 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          y: 0,
-          transition: { duration: 3, type: 'spring' },
-        }}
-        viewport={{ once: true }}
+        {...projectLayout}
       >
         <ProjectItem
           img={burgerWebsiteImg}
