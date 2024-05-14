@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { form } from '../constants/animations';
-import { formFields } from '../constants/index';
+import { formFields, FormField } from '../constants/index';
 
 interface FormProps {
   fields: FormField[];

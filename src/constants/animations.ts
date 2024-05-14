@@ -5,7 +5,7 @@ import { Transition, Variants } from 'framer-motion';
 export const slideDown = {
   initial: { opacity: 0, y: -50 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 2, type: 'tween' },
+  transition: { duration: 2, delay: 2, type: 'tween' },
   viewport: { once: true },
 };
 
@@ -35,6 +35,7 @@ export const navLinkVariants = {
     scale: 1.0,
     transition: {
       duration: 1.5,
+      delay: 3,
     },
   },
 };
