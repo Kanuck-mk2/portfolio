@@ -1,6 +1,12 @@
 import Resume from '../assets/Resume-2024.pdf';
 import { motion } from 'framer-motion';
-import { contact1, contact2, form, submit } from '../constants/animations';
+import {
+  contact1,
+  contact2,
+  form,
+  resume,
+  submit,
+} from '../constants/animations';
 
 export default function Contact() {
   return (
@@ -75,28 +81,14 @@ export default function Contact() {
           className="gradient-bg text-white mt-4 w-full p-4 rounded-lg glow-border"
           type="submit"
           {...submit}
-        
         >
           Send Message
         </motion.button>
 
         <motion.button
-          type="button"
-          initial={{ opacity: 0, x: -300, y: 0 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: { type: 'spring' },
-          }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{
-            scale: 0.1,
-            borderRadius: '100%',
-            transition: { duration: 0.2 },
-          }}
           className="bg-gradient-to-br from-blue-400 to-slate-500 text-white mt-4 w-full p-4 rounded-lg glow-border"
+          type="button"
+          {...resume}
           onClick={() => {
             const link = document.createElement('a');
             link.href = Resume;

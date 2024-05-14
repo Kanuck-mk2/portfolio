@@ -319,3 +319,29 @@ export const submit = {
     transition: { duration: 0.2 },
   },
 };
+
+export const resume = {
+  initial: { opacity: 0, x: -300, y: 0 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { type: 'spring' },
+  },
+  viewport: { once: true },
+  whileHover: { scale: 1.1 },
+  whileTap: {
+    scale: 0.1,
+    borderRadius: '100%',
+    transition: { duration: 0.2 },
+  },
+};
+
+/////////////////////////*footer*/////////////////////////////
+
+export const footer = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true },
+  transition: { duration: 5 },
+};
