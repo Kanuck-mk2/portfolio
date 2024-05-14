@@ -1,5 +1,6 @@
 import Resume from '../assets/Resume-2024.pdf';
 import { motion } from 'framer-motion';
+import { contact1, contact2, form, submit } from '../constants/animations';
 
 export default function Contact() {
   return (
@@ -9,27 +10,13 @@ export default function Contact() {
     >
       <motion.h1
         className="py-4 text-4xl font-nunito font-bold text-center ml-20 -mt-3 text-white"
-        initial={{ opacity: 0, x: 500, y: 0 }}
-        whileInView={{
-          opacity: 1,
-          x: -69,
-          y: 0,
-          transition: { type: 'spring' },
-        }}
-        viewport={{ once: true }}
+        {...contact1}
       >
         Con
       </motion.h1>
       <motion.h1
         className="py-4 text-4xl font-nunito font-bold text-center ml-20 -mt-3 text-white"
-        initial={{ opacity: 0, x: -500, y: -60 }}
-        whileInView={{
-          opacity: 1,
-          x: -2,
-          y: -60,
-          transition: { type: 'spring' },
-        }}
-        viewport={{ once: true }}
+        {...contact2}
       >
         tact
       </motion.h1>
@@ -43,18 +30,7 @@ export default function Contact() {
             { label: 'Name', name: 'name' },
             { label: 'Phone', name: 'phone' },
           ].map((field, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -500 : 500, y: 0 }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-                y: 0,
-                transition: { duration: 3, type: 'spring' },
-              }}
-              viewport={{ once: true }}
-              whileTap={{ scale: 0.5 }}
-            >
+            <motion.div key={index} {...form(index)}>
               <div className="flex flex-col">
                 <label className="uppercase text-sm py-2 text-white">
                   {field.label}
@@ -71,18 +47,7 @@ export default function Contact() {
         </div>
 
         {['Email', 'Subject', 'Message'].map((label, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -500 : 500, y: 0 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              y: 0,
-              transition: { duration: 3, type: 'spring' },
-            }}
-            viewport={{ once: true }}
-            whileTap={{ scale: 0.5 }}
-          >
+          <motion.div key={index} {...form(index)}>
             <div className="flex flex-col py-2">
               <label className="uppercase text-sm py-2 text-white">
                 {label}
@@ -107,22 +72,10 @@ export default function Contact() {
         ))}
 
         <motion.button
-          type="submit"
-          initial={{ opacity: 0, x: 300, y: 0 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: { type: 'spring' },
-          }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{
-            scale: 0.1,
-            borderRadius: '100%',
-            transition: { duration: 0.2 },
-          }}
           className="gradient-bg text-white mt-4 w-full p-4 rounded-lg glow-border"
+          type="submit"
+          {...submit}
+        
         >
           Send Message
         </motion.button>

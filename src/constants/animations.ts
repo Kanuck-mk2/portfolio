@@ -224,7 +224,6 @@ export const projectTransition: Transition = {
 export const projectVariants: Variants = {
   initial: { opacity: 0, x: 0, y: 50 },
   whileInView: { opacity: 1, x: 0, y: 0, rotate: 720 },
-  
 };
 
 export const projectHoverTap = {
@@ -267,4 +266,56 @@ export const projectLayout = {
     transition: { duration: 3, type: 'spring' },
   },
   viewport: { once: true },
+};
+
+/////////////////////////*contact animations*///////////////////////
+
+export const contact1 = {
+  initial: { opacity: 0, x: 500, y: 0 },
+  whileInView: {
+    opacity: 1,
+    x: -69,
+    y: 0,
+    transition: { type: 'spring' },
+  },
+  viewport: { once: true },
+};
+
+export const contact2 = {
+  initial: { opacity: 0, x: -500, y: -60 },
+  whileInView: {
+    opacity: 1,
+    x: -2,
+    y: -60,
+    transition: { type: 'spring' },
+  },
+  viewport: { once: true },
+};
+
+export const form = (index: number) => ({
+  initial: { opacity: 0, x: index % 2 === 0 ? -500 : 500 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 3, type: 'spring' },
+  },
+  viewport: { once: true },
+  whileTap: { scale: 0.5 },
+});
+
+export const submit = {
+  initial: { opacity: 0, x: 300, y: 0 },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { type: 'spring' },
+  },
+  viewport: { once: true },
+  whileHover: { scale: 1.1 },
+  whileTap: {
+    scale: 0.1,
+    borderRadius: '100%',
+    transition: { duration: 0.2 },
+  },
 };
