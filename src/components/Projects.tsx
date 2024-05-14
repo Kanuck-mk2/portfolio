@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="gradient-bg3 border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
+      className="gradient-bg border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
     >
       <motion.h1
         className="text-4xl font-nunito font-bold text-center text-white"

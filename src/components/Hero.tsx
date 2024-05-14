@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {
   dragAnimation,
   gitAnimation,
+  glassFade,
   imageAnimation,
   instaAnimation,
   linkAnimation,
@@ -16,6 +17,11 @@ const Hero = () => {
 
   return (
     <div id="home" className="w-full h-screen relative">
+        <motion.div
+        className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-transparent to-transparent z-10"
+        style={{ backdropFilter: 'blur(10px)' }}
+        {...glassFade}
+      ></motion.div>
       <img
         className="w-full h-screen object-cover object-left"
         alt="background"
@@ -24,12 +30,12 @@ const Hero = () => {
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="max-w-[750px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
-          <div className="flex flex-col justify-center items-center lg:flex-row-reverse">
+          <div className="flex flex-col justify-center items-center lg:flex-row-reverse z-[500]">
             <motion.div {...imageAnimation} whileHover={{ scale: 1.2 }}>
               <motion.img
                 src="./profile/shawn-profile2.webp"
                 alt="Profile Picture"
-                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer z-[500] "
+                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer "
                 {...dragAnimation}
               />
             </motion.div>
@@ -85,7 +91,7 @@ const Hero = () => {
                 </motion.h2>
               </motion.div>
 
-              <div className="flex justify-between lg:items-center pt-6 max-w-[300px] w-full">
+              <div className="flex justify-between lg:items-center pt-6 max-w-[300px] w-full z-[999]">
                 <motion.a
                   title="/"
                   href="/"

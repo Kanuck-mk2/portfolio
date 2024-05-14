@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion';
 import ImageSlider from './ImageSlider';
-import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
+import {
+  aboutImage,
+  aboutText,
+  aboutTitle,
+  
+} from '../constants/animations';
+import { imageAssets } from '../constants/index';
 
 const About: React.FC = () => {
-  const imageAssets: string[] = [
-    './profile/shawnm1.jpg',
-    './profile/shawn1.webp',
-    './profile/shawn-side.jpg',
-    './profile/shawn2.webp',
-    './profile/shawn4.webp',
-    './profile/shawn5.webp',
-  ];
-
   return (
     <div id="about" className="border-2 w-full m-auto py-16 gradient-bg">
       <motion.h1

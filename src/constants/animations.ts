@@ -1,5 +1,22 @@
 import { Transition, Variants } from 'framer-motion';
 
+/////////////////////////*glassfade animation*//////////////////
+
+export const glassFade = {
+  initial: { opacity: 1 },
+
+  whileInView: { opacity: 0 },
+  viewport: { once: false },
+  transition: { duration: 4 },
+};
+
+export const navFade = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true },
+  transition: { duration: 2 },
+};
+
 ///////////////////////*navbar animations*///////////////////////////
 
 export const navMenuAnimation = {
@@ -337,7 +354,7 @@ export const resume = {
   },
 };
 
-/////////////////////////*footer*/////////////////////////////
+//////////////////////////////////////////////*footer*/////////////////////////////////////////////////////
 
 export const footer = {
   initial: { opacity: 0 },

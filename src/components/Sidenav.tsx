@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import NavItem from './navItem';
+import { motion } from 'framer-motion';
+import { navFade } from '../constants/animations';
 
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
-    console.log('Toggling nav state');
     setNav(!nav);
   };
 
   const handleLinkClick = () => {
-    console.log('Closing menu');
     setNav(false);
   };
 
@@ -37,11 +37,11 @@ export default function Sidenav() {
         </div>
       )}
 
-      <div className="flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/80 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]">
-        <a
-          href="#home"
-          className="m-2 p-4 cursor-pointer  "
-        >
+      <motion.div
+        className="flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/80 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]"
+        {...navFade}
+      >
+        <a href="#home" className="m-2 p-4 cursor-pointer  ">
           Home
         </a>
         <a
@@ -68,7 +68,7 @@ export default function Sidenav() {
         >
           Contact
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 }
