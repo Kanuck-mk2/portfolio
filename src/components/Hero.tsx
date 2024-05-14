@@ -13,7 +13,7 @@ import {
 import { useState } from 'react';
 
 const Hero = () => {
-  const [textColor, setTextColor] = useState('aqua');
+  const [textColor, setTextColor] = useState('lime');
 
   return (
     <div id="home" className="w-full h-screen relative">
@@ -48,14 +48,14 @@ const Hero = () => {
                 whileHover={{ scale: 1.2 }}
               >
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 mr-2 z-30"
+                  className="font-nunito font-bold  sm:text-5xl text-4xl text-cyan-300 mr-2 z-30"
                   {...textAnimation}
                 >
                   Chad
                 </motion.h1>
 
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-400 z-30"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-300 z-30"
                   {...textAnimation2}
                 >
                   Parenteau
@@ -80,7 +80,7 @@ const Hero = () => {
                       () => setTextColor('aqua'),
                       'Designer',
                       2000,
-                      () => setTextColor('fuchsia'),
+                      () => setTextColor('orange'),
                       'Code and Tech Enthusiast',
                       2000,
                       () => setTextColor('lime'),

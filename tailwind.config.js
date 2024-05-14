@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         karla: ['Karla, san serif'],
         nunito: ['Nunito, sans serif'],
+        kanit: ['Kanit, sans serif'],
       },
     },
   },

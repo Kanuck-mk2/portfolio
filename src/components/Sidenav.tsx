@@ -39,14 +39,14 @@ export default function Sidenav() {
       )}
 
       <motion.div
-        className="hidden md:flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/10 backdrop-filter backdrop-blur-lg text-white text-xl font-bold fixed z-[999]"
+        className="hidden md:flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/10 backdrop-filter backdrop-blur-lg text-slate-300 text-xl   rounded-sm fixed z-[999]"
         {...slideDown}
       >
         {navLinks.map((link, index) => (
           <motion.a
             key={index}
             href={link.href}
-            className="m-2 p-4 cursor-pointer hover:text-sky-400"
+            className="m-2 p-4 font-nunito font-bold cursor-pointer hover:text-slate-700 duration-200 ease-in-out"
             initial="hidden"
             animate="visible"
             variants={navLinkVariants}
