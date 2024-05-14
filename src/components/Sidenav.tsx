@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import NavItem from './navItem';
 import { motion } from 'framer-motion';
-
 import { navLinks } from '../constants';
 import { navLinkVariants, slideDown } from '../constants/animations';
 
