@@ -109,7 +109,7 @@ body {
     rgb(10, 109, 231),
     rgb(87, 124, 169)
   );
-  border: 2px solid transparent; /* Set a transparent border */
+  border: 2px solid transparent;
   border-image-slice: 1;
   border-image-source: linear-gradient(
     to bottom right,
@@ -120,22 +120,13 @@ body {
 }
 
 .gradient-bg {
-  background: linear-gradient(
-    to bottom right,
-    rgb(19, 64, 91),
-    rgb(73, 118, 146)
-  );
+  background: linear-gradient(160deg, rgb(19, 64, 91), rgb(73, 118, 146));
 }
 
 .gradient-bg2 {
-  background: linear-gradient(-145deg, rgb(87, 124, 169), rgb(39, 33, 116));
+  background: linear-gradient(60deg, rgb(19, 64, 91), rgb(73, 118, 146));
 }
-.gradient-bg3 {
-  background: linear-gradient(145deg, rgb(39, 33, 116), rgb(13, 11, 38));
-}
-.grad-bg4 {
-  background: linear-gradient(145deg, hsl(217, 75%, 29%), hsl(194, 66%, 49%));
-}
+
 
 .custom {
   background-image: url('/bg3.jpg');

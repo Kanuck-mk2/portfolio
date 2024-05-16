@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="gradient-bg border-2 rounded-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
+      className="gradient-bg2 border-t-2  w-full m-auto md:pl-20 p-4 py-16 relative z-10"
     >
       <motion.h1
         className="text-4xl p-4 font-nunito font-bold text-center text-white"

@@ -9,13 +9,19 @@ export const slideDown = {
   viewport: { once: true },
 };
 
+export const slideUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 2, type: 'spring' },
+  viewport: { once: true },
+};
+
 /////////////////////////*glassfade animation*//////////////////
 
 export const glassFade = {
   initial: { opacity: 1 },
-
   whileInView: { opacity: 0 },
-  viewport: { once: true },
+  viewport: { once: false },
   transition: { duration: 4 },
 };
 

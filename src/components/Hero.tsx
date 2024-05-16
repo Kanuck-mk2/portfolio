@@ -30,7 +30,7 @@ const Hero = () => {
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="max-w-[750px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
-          <div className="flex flex-col justify-center items-center lg:flex-row-reverse z-[500]">
+          <div className="flex flex-col justify-center items-center lg:flex-row-reverse z-[600]">
             <motion.div {...imageAnimation} whileHover={{ scale: 1.2 }}>
               <motion.img
                 src="./profile/shawn-profile2.webp"
@@ -48,14 +48,14 @@ const Hero = () => {
                 whileHover={{ scale: 1.2 }}
               >
                 <motion.h1
-                  className="font-nunito font-bold  sm:text-5xl text-4xl text-cyan-300 mr-2 z-30"
+                  className="font-nunito font-bold  sm:text-5xl text-4xl text-slate-200 mr-2 z-30"
                   {...textAnimation}
                 >
                   Chad
                 </motion.h1>
 
                 <motion.h1
-                  className="font-nunito font-bold sm:text-5xl text-4xl text-cyan-300 z-30"
+                  className="font-nunito font-bold sm:text-5xl text-4xl text-slate-200 z-30"
                   {...textAnimation2}
                 >
                   Parenteau
@@ -80,10 +80,10 @@ const Hero = () => {
                       () => setTextColor('aqua'),
                       'Designer',
                       2000,
-                      () => setTextColor('orange'),
+                      () => setTextColor('lime'),
                       'Code and Tech Enthusiast',
                       2000,
-                      () => setTextColor('lime'),
+                      () => setTextColor('pink'),
                     ]}
                     wrapper="span"
                     speed={50}

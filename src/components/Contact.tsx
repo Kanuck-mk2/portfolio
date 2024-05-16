@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="gradient-bg border-t-2 border-l-2 border-r-2 rounded-t-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
+      className="gradient-bg border-t-2   rounded-t-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
     >
       <motion.h1
         className="py-4 text-4xl font-nunito font-bold text-center ml-20 -mt-3 text-white"
@@ -32,14 +32,14 @@ export default function Contact() {
         </div>
         <Form fields={formFields.slice(2)} />
         <motion.button
-          className="gradient-bg text-white mt-4 w-full p-4 rounded-lg glow-border"
+          className="gradient-bg2 text-white mt-4 w-full p-4 rounded-lg glow-border"
           type="submit"
           {...submit}
         >
           Send Message
         </motion.button>
         <motion.button
-          className="bg-gradient-to-br from-blue-400 to-slate-500 text-white mt-4 w-full p-4 rounded-lg glow-border"
+          className="gradient-bg2  text-white mt-4 w-full p-4 rounded-lg glow-border"
           type="button"
           {...resume}
           onClick={() => {

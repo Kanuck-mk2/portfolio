@@ -10,7 +10,7 @@ import { imageAssets } from '../constants/index';
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="border-2 w-full m-auto py-16 gradient-bg">
+    <div id="about" className=" border-t-2 w-full m-auto py-16 gradient-bg">
       <motion.h1
         className="font-nunito font-bold text-4xl text-center text-white mt-10 mb-5"
         {...aboutTitle}
