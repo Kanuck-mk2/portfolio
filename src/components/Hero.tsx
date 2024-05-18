@@ -1,4 +1,3 @@
-import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import {
   dragAnimation,
@@ -10,10 +9,10 @@ import {
   textAnimation,
   textAnimation2,
 } from '../constants/animations';
-import { useState } from 'react';
+import { FlipWords } from './FlipWords';
 
 const Hero = () => {
-  const [textColor, setTextColor] = useState('lime');
+  const words = ['Designer', 'Web Developer', 'Tech Enthusiast'];
 
   return (
     <div id="home" className="w-full h-screen relative">
@@ -35,7 +34,7 @@ const Hero = () => {
               <motion.img
                 src="./profile/shawn-profile2.webp"
                 alt="Profile Picture"
-                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer "
+                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer gap-4 "
                 {...dragAnimation}
                 whileHover={{ rotate: 720 }}
                 transition={{ duration: 0.7 }}
@@ -62,34 +61,12 @@ const Hero = () => {
                 </motion.h1>
               </motion.div>
 
-              <motion.div
-                style={{
-                  fontSize: '35px',
-                  color: textColor,
-                }}
-                {...textAnimation}
-              >
+              <motion.div {...textAnimation}>
                 <motion.h2
-                  className="flex sm:text-3xl text-2xl pt-4 mr-2 "
+                  className="flex sm:text-3xl text-2xl pt-4 mr-2"
                   whileHover={{ scale: 1.2, rotate: 360 }}
                 >
-                  <TypeAnimation
-                    sequence={[
-                      'Web Developer',
-                      2000,
-                      () => setTextColor('aqua'),
-                      'Designer',
-                      2000,
-                      () => setTextColor('lime'),
-                      'Code and Tech Enthusiast',
-                      2000,
-                      () => setTextColor('pink'),
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    style={{ fontSize: '1em', paddingLeft: '5px' }}
-                    repeat={Infinity}
-                  />
+                  <FlipWords words={words} />
                 </motion.h2>
               </motion.div>
 
