@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import ImageSlider from './ImageSlider';
-import {
-  aboutImage,
-  aboutText,
-  aboutTitle,
-  
-} from '../constants/animations';
+import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 import { imageAssets } from '../constants/index';
+import { TextEffect } from './TextEffect';
+
+const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, Ive always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. Ive particularly enjoyed summer trips to pristine locations like Jasper and Banff. 
+  It wasnt until I turned 38 that I stumbled upon the world of coding, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 
+  As a self-taught coder, Ive delved into the realm of coding with boundless enthusiasm and determination, embracing each challenge as an opportunity for growth and adaptation. 
+  
+  Beyond coding, I find joy in staying active, indulging in culinary adventures, and immersing myself in the world of video games.`;
 
 const About: React.FC = () => {
   return (
@@ -31,25 +33,12 @@ const About: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        <motion.p
+        <motion.div
           className="text-slate-200 flex flex-col justify-start overflow-x-hidden md:w-2/3 p-4 mt-4"
           {...aboutText}
         >
-          Growing up in Edmonton, Alberta, amidst the sweeping landscapes of
-          Western Canada, I've always been fortunate to live close by the
-          awe-inspiring beauty of the Canadian Rockies. I've particularly
-          enjoyed summer trips to pristine locations like Jasper and Banff.
-          <br className="mt-3" />
-          It wasn't until I turned 38 that I stumbled upon the world of coding,
-          embarking on a transformative journey brimming with endless
-          possibilities and exciting opportunities in technology. As a
-          self-taught coder, I've delved into the realm of coding with boundless
-          enthusiasm and determination, embracing each challenge as an
-          opportunity for growth and adaptation.
-          <br className="mt-3" />
-          Beyond coding, I find joy in staying active, indulging in culinary
-          adventures, and immersing myself in the world of video games.
-        </motion.p>
+          <TextEffect words={words} />
+        </motion.div>
       </div>
     </div>
   );
