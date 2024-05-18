@@ -64,7 +64,7 @@ const Hero = () => {
               <motion.div {...textAnimation}>
                 <motion.h2
                   className="flex sm:text-3xl text-2xl pt-4 mr-2"
-                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileHover={{ scale: 1.2 }}
                 >
                   <FlipWords words={words} />
                 </motion.h2>

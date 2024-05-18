@@ -57,12 +57,12 @@ export const FlipWords = ({
           opacity: 0,
           y: -40,
           x: 40,
-          filter: 'blur(12px)',
+          filter: 'blur(8px)',
           scale: 2,
           position: 'absolute',
         }}
         className={cn(
-          'z-10 inline-block relative text-left text-neutral-900 dark:text-sky-300 px-2',
+          'z-10 inline-block  relative text-left text-neutral-900 dark:text-sky-300 px-2',
           className,
         )}
         key={currentWord}
@@ -75,7 +75,7 @@ export const FlipWords = ({
                 initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 transition={{
-                  delay: letterIndex * 0.08,
+                  delay: letterIndex * 0.12,
                   duration: 0.4,
                 }}
                 className="inline-block"
