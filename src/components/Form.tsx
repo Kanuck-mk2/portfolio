@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { form } from '../constants/animations';
-import { formFields, FormField } from '../constants/index';
+import { formFields } from '../constants';
 
 interface FormProps {
-  fields: FormField[];
+  fields: formFields[];
 }
 
 const Form: React.FC<FormProps> = ({ fields }) => {

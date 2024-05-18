@@ -46,7 +46,7 @@ export default function Sidenav() {
           <motion.a
             key={index}
             href={link.href}
-            className="m-2 p-4 font-nunito font-bold cursor-pointer hover:text-slate-700 duration-200 ease-in-out"
+            className="m-2 p-4 font-nunito font-bold cursor-pointer hover:text-sky-500 duration-200 ease-in-out"
             initial="hidden"
             animate="visible"
             variants={navLinkVariants}

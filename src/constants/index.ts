@@ -71,14 +71,14 @@ export const skillsData: SkillData[] = [
 ];
 
 
-interface FormField {
+interface formFields {
   label: string;
   name: string;
   type?: string;
   rows?: number;
 }
 
-export const formFields: FormField[] = [
+export const formFields: formFields[] = [
   { label: 'Name', name: 'name' },
   { label: 'Phone', name: 'phone' },
   { label: 'Email', name: 'email' },
