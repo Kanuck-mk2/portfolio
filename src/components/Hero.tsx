@@ -28,13 +28,17 @@ const Hero = () => {
       />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
-        <div className="max-w-[750px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
-          <div className="flex flex-col justify-center items-center lg:flex-row-reverse z-[600]">
-            <motion.div {...imageAnimation} whileHover={{ scale: 1.2 }}>
+        <div className=" max-w-[850px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
+          <div className="flex flex-col justify-evenly items-center lg:flex-row-reverse  z-[600]">
+            <motion.div
+              className=""
+              {...imageAnimation}
+              whileHover={{ scale: 1.2 }}
+            >
               <motion.img
                 src="./profile/shawn-profile2.webp"
                 alt="Profile Picture"
-                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer gap-4 "
+                className="rounded-full w-[250px] h-[250px] border border-black justify-end glow-border cursor-pointer"
                 {...dragAnimation}
                 whileHover={{ rotate: 720 }}
                 transition={{ duration: 0.7 }}
@@ -63,7 +67,7 @@ const Hero = () => {
 
               <motion.div {...textAnimation}>
                 <motion.h2
-                  className="flex sm:text-3xl text-2xl pt-4 mr-2"
+                  className=" flex justify-center items-center sm:text-3xl text-2xl w-[280px] h-[40px] "
                   whileHover={{ scale: 1.2 }}
                 >
                   <FlipWords words={words} />
