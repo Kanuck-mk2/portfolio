@@ -74,7 +74,7 @@ const Hero = () => {
                 </motion.h2>
               </motion.div>
 
-              <div className="flex justify-between lg:items-center pt-6 max-w-[300px] w-full z-[999]">
+              <div className="flex justify-evenly lg:items-center pt-6 gap-9 max-w-[300px] w-full z-[999]">
                 <motion.a
                   title="/"
                   href="/"
