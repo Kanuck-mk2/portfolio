@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { AnimatePresence, motion, LayoutGroup } from 'framer-motion';
 import { cn } from '../constants/cn.ts';
-let interval: any;
+let interval: number;
 
 export const FlipWords = ({
   words,
@@ -92,3 +92,5 @@ export const FlipWords = ({
     </AnimatePresence>
   );
 };
+
+

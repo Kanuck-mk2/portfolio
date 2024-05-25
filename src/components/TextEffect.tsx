@@ -23,7 +23,7 @@ export const TextEffect = ({
         delay: stagger(0.1),
       },
     );
-  }, []);
+  }, [animate]);
 
   const renderWords = () => {
     return (

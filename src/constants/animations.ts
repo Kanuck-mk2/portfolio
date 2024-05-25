@@ -85,7 +85,7 @@ export const hoverTap = {
 /////////////////////////////////////*hero animations*/////////////////////////////////////////
 
 export const imageAnimation = {
-  initial: { opacity: 0, x: 100, y: -200 },
+  initial: { opacity: 0, x: 100, y: -100 },
   animate: { opacity: 1, x: 0, y: 0 },
   whileInView: { opacity: 1, rotate: 720 },
   transition: { duration: 3, type: 'spring' },
@@ -98,12 +98,12 @@ export const dragAnimation = {
 };
 
 export const textAnimation = {
-  initial: { opacity: 0, x: 0, y: 500 },
+  initial: { opacity: 0, x: 0, y: 50 },
   animate: { opacity: 1, x: 0, y: 0 },
   transition: { duration: 4, type: 'spring' },
 };
 export const textAnimation2 = {
-  initial: { opacity: 0, x: 0, y: -500 },
+  initial: { opacity: 0, x: 0, y: -50 },
   animate: { opacity: 1, x: 0, y: 0 },
   transition: { duration: 4, type: 'spring' },
 };
@@ -111,21 +111,21 @@ export const transition = {
   transition: { duration: 4, type: 'spring' },
 };
 export const linkAnimation = {
-  initial: { opacity: 0, x: 500, y: -500 },
+  initial: { opacity: 0, x: 50, y: -200 },
   animate: { opacity: 1, x: 0, y: 0 },
   whileInView: { opacity: 1, x: 0, y: 0, rotate: 720 },
   transition: { duration: 5, type: 'spring' },
 };
 
 export const gitAnimation = {
-  initial: { opacity: 0, x: -500, y: 500 },
+  initial: { opacity: 0, x: -100, y: 200 },
   animate: { opacity: 1, x: 0, y: 0 },
   whileInView: { opacity: 1, x: 0, y: 0, rotate: -720 },
   transition: { duration: 3, type: 'spring' },
 };
 
 export const instaAnimation = {
-  initial: { opacity: 0, x: -500, y: -500 },
+  initial: { opacity: 0, x: -100, y: -100 },
   animate: { opacity: 1, x: 0, y: 0 },
   whileInView: { opacity: 1, x: 0, y: 0, rotate: 720 },
   transition: { duration: 4, type: 'spring' },
