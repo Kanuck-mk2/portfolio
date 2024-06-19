@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { motion, stagger, useAnimate } from 'framer-motion';
-import { cn } from '../constants/cn.ts';
+import { cn } from './cn.ts';
 
 export const TextEffect = ({
   words,
@@ -33,7 +33,7 @@ export const TextEffect = ({
       },
       {
         threshold: 0.1, // Trigger when 10% of the component is visible
-      }
+      },
     );
 
     if (currentRef) {

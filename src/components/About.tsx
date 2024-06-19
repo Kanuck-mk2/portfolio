@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import ImageSlider from './ImageSlider';
 import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 import { imageAssets } from '../constants/index';
-import { TextEffect } from './TextEffect';
+import { TextEffect } from '../constants/TextEffect';
+
 
 const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, Ive always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. Ive particularly enjoyed summer trips to pristine locations like Jasper and Banff. 
   It wasnt until I turned 38 that I stumbled upon the world of coding, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 

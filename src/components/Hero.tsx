@@ -9,7 +9,7 @@ import {
   textAnimation,
   textAnimation2,
 } from '../constants/animations';
-import { FlipWords } from './FlipWords';
+import { FlipWords } from '../constants/FlipWords';
 
 const Hero = () => {
   const words = ['Designer', 'Web Developer', 'Tech Enthusiast'];
