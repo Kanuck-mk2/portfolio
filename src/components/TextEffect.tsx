@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, stagger, useAnimate } from 'framer-motion';
 import { cn } from '../constants/cn.ts';
 
@@ -12,17 +12,39 @@ export const TextEffect = ({
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(' ');
+  const ref = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    animate(
-      'span',
-      {
-        opacity: 1,
+    const currentRef = ref.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          animate(
+            'span',
+            {
+              opacity: 1,
+            },
+            {
+              duration: 1,
+              delay: stagger(0.1),
+            },
+          );
+        }
       },
       {
-        duration: 1,
-        delay: stagger(0.1),
-      },
+        threshold: 0.1, // Trigger when 10% of the component is visible
+      }
     );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
   }, [animate]);
 
   const renderWords = () => {
@@ -45,7 +67,7 @@ export const TextEffect = ({
   return (
     <div className={cn(className)}>
       <div className="mt-4">
-        <div className=" text-white leading-snug tracking-wide">
+        <div ref={ref} className="text-white leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
