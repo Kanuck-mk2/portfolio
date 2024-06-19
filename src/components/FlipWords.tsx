@@ -1,8 +1,7 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
-import { AnimatePresence, motion, LayoutGroup } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '../constants/cn.ts';
-let interval: number;
 
 export const FlipWords = ({
   words,
@@ -13,27 +12,36 @@ export const FlipWords = ({
   duration?: number;
   className?: string;
 }) => {
-  const [currentWord, setCurrentWord] = useState(words[0]);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const animationFrameRef = useRef<number | null>(null);
+  const startTimeRef = useRef<number | null>(null);
 
   useEffect(() => {
-    startAnimation();
+    const animate = (timestamp: number) => {
+      if (!startTimeRef.current) {
+        startTimeRef.current = timestamp;
+      }
+
+      const elapsed = timestamp - startTimeRef.current;
+
+      if (elapsed >= duration) {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+        startTimeRef.current = timestamp; // reset start time
+      }
+
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    animationFrameRef.current = requestAnimationFrame(animate);
 
     return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  const startAnimation = () => {
-    let i = 0;
-    interval = setInterval(() => {
-      i++;
-      if (i === words.length) {
-        i = 0;
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
       }
-      const word = words[i];
-      setCurrentWord(word);
-    }, duration);
-  };
+    };
+  }, [words, duration]);
+
+  const currentWord = words[currentWordIndex];
 
   return (
     <AnimatePresence>
@@ -92,5 +100,3 @@ export const FlipWords = ({
     </AnimatePresence>
   );
 };
-
-
