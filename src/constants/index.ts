@@ -6,8 +6,6 @@ export const navLinks = [
   { href: '#contact', text: 'Contact' },
 ];
 
-
-
 export const imageAssets: string[] = [
   './profile/shawnm1.jpg',
   './profile/shawn1.webp',
@@ -23,7 +21,6 @@ interface SkillData {
   duration: string;
   details: string;
 }
-
 
 export const skillsData: SkillData[] = [
   {
@@ -70,18 +67,17 @@ export const skillsData: SkillData[] = [
   },
 ];
 
-
-interface formFields {
+export interface FormField {
   label: string;
   name: string;
   type?: string;
   rows?: number;
 }
 
-export const formFields: formFields[] = [
-  { label: 'Name', name: 'name' },
-  { label: 'Phone', name: 'phone' },
-  { label: 'Email', name: 'email' },
-  { label: 'Subject', name: 'subject' },
+export const formFields: FormField[] = [
+  { label: 'Name', type: 'text', name: 'name' },
+  { label: 'Phone', type: 'number', name: 'phone' },
+  { label: 'Email', type: 'text', name: 'email' },
+  { label: 'Subject', type: 'text', name: 'subject' },
   { label: 'Message', name: 'message', type: 'textarea', rows: 10 },
 ];

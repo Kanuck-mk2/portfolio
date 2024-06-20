@@ -1,9 +1,11 @@
+// components/Form.tsx
+
 import { motion } from 'framer-motion';
 import { form } from '../constants/animations';
-import { formFields } from '../constants';
+import { FormField } from '../constants';
 
 interface FormProps {
-  fields: formFields[];
+  fields: FormField[];
 }
 
 const Form: React.FC<FormProps> = ({ fields }) => {
@@ -25,7 +27,7 @@ const Form: React.FC<FormProps> = ({ fields }) => {
             ) : (
               <input
                 className="border-2 rounded-lg p-3 flex border-gray-300"
-                type={field.name === 'email' ? 'email' : 'text'}
+                type={field.type === 'email' ? 'email' : 'text'}
                 name={field.name}
                 placeholder={`Enter ${field.label}`}
               />
