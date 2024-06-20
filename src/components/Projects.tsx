@@ -38,7 +38,7 @@ export default function Projects() {
         <ProjectItem
           img={burgerWebsiteImg}
           title="Burger Restaurant Website Layout"
-          link="https://burger-website-wine.vercel.app/"
+          link="/"
         />
         {/*add another ProjectItem component here */}
       </motion.div>
