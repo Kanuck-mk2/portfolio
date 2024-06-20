@@ -169,7 +169,7 @@ export const aboutText = {
 /////////////////////////////////////////////////*Skills animations*/////////////////////////////////////
 
 export const skillTitle = {
-  initial: { opacity: 0, x: 0, y: 300 },
+  initial: { opacity: 0, x: 0, y: 30 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -205,7 +205,7 @@ export const skillTitles = {
 };
 
 export const skillDuration = {
-  initial: { opacity: 0, x: 0, y: -200 },
+  initial: { opacity: 0, x: 0, y: -20 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -251,7 +251,7 @@ export const projectHoverTap = {
 ////////////Project section/////////////
 
 export const projectTitle = {
-  initial: { opacity: 0, x: -500, y: 0 },
+  initial: { opacity: 0, x: -50, y: 0 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -263,7 +263,7 @@ export const projectTitle = {
 };
 
 export const projectText = {
-  initial: { opacity: 0, x: 500, y: 0 },
+  initial: { opacity: 0, x: 50, y: 0 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -288,7 +288,7 @@ export const projectLayout = {
 /////////////////////////*contact animations*///////////////////////
 
 export const contact1 = {
-  initial: { opacity: 0, x: 500, y: 0 },
+  initial: { opacity: 0, x: 50, y: 0 },
   whileInView: {
     opacity: 1,
     x: -69,
@@ -299,7 +299,7 @@ export const contact1 = {
 };
 
 export const contact2 = {
-  initial: { opacity: 0, x: -500, y: -60 },
+  initial: { opacity: 0, x: -50, y: -60 },
   whileInView: {
     opacity: 1,
     x: -2,
@@ -310,7 +310,7 @@ export const contact2 = {
 };
 
 export const form = (index: number) => ({
-  initial: { opacity: 0, x: index % 2 === 0 ? -500 : 500 },
+  initial: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -321,7 +321,7 @@ export const form = (index: number) => ({
 });
 
 export const submit = {
-  initial: { opacity: 0, x: 300, y: 0 },
+  initial: { opacity: 0, x: 30, y: 0 },
   whileInView: {
     opacity: 1,
     x: 0,
@@ -338,7 +338,7 @@ export const submit = {
 };
 
 export const resume = {
-  initial: { opacity: 0, x: -300, y: 0 },
+  initial: { opacity: 0, x: -30, y: 0 },
   whileInView: {
     opacity: 1,
     x: 0,
