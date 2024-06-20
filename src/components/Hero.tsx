@@ -28,8 +28,8 @@ const Hero = () => {
       />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
-        <div className=" max-w-[850px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
-          <div className="flex flex-col justify-evenly items-center lg:flex-row-reverse  z-[600]">
+        <div className="max-w-[850px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
+          <div className=" flex flex-col justify-evenly items-center lg:flex-row-reverse  z-[600]">
             <motion.div
               className=""
               {...imageAnimation}
