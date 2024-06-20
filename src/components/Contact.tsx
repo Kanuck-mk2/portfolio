@@ -32,14 +32,14 @@ export default function Contact() {
         </div>
         <Form fields={formFields.slice(2)} />
         <motion.button
-          className=" bg-slate-200/10 backdrop-filter backdrop-blur-lg text-white mt-4 w-full p-4 rounded-lg glow-border"
+          className=" bg-slate-200/20 backdrop-filter backdrop-blur-lg text-white mt-4 w-full p-4 rounded-lg glow-border"
           type="submit"
           {...submit}
         >
           Send Message
         </motion.button>
         <motion.button
-          className=" bg-slate-200/10 backdrop-filter backdrop-blur-lg  text-white mt-4 w-full p-4 rounded-lg glow-border"
+          className=" bg-slate-200/20 backdrop-filter backdrop-blur-lg  text-white mt-4 w-full p-4 rounded-lg glow-border"
           type="button"
           {...resume}
           onClick={() => {

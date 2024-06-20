@@ -19,14 +19,14 @@ const Form: React.FC<FormProps> = ({ fields }) => {
             </label>
             {field.type === 'textarea' ? (
               <textarea
-                className="border-2 rounded-lg p-3 border-gray-300"
+                className="border-2 rounded-lg p-3 border-gray-300 "
                 rows={field.rows || 3}
                 name={field.name}
                 placeholder={`Enter ${field.label.toLowerCase()}`}
               ></textarea>
             ) : (
               <input
-                className="border-2 rounded-lg p-3 flex border-gray-300"
+                className="border-2 rounded-lg p-3 flex border-gray-300 "
                 type={field.type === 'email' ? 'email' : 'text'}
                 name={field.name}
                 placeholder={`Enter ${field.label}`}
