@@ -1,5 +1,6 @@
 import ProjectItem from './ProjectItem';
 import burgerWebsiteImg from '../assets/burger-website.png';
+import nikeCloneImg from '../assets/nike-clone.png';
 import { motion } from 'framer-motion';
 import {
   projectLayout,
@@ -38,6 +39,11 @@ export default function Projects() {
         <ProjectItem
           img={burgerWebsiteImg}
           title="Burger Restaurant Website Layout"
+          link="/"
+        />
+        <ProjectItem
+          img={nikeCloneImg}
+          title="Nike Landing Page Clone"
           link="/"
         />
         {/*add another ProjectItem component here */}
