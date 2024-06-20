@@ -4,7 +4,6 @@ import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 import { imageAssets } from '../constants/index';
 import { TextEffect } from '../constants/TextEffect';
 
-
 const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, Ive always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. Ive particularly enjoyed summer trips to pristine locations like Jasper and Banff. 
   It wasnt until I turned 38 that I stumbled upon the world of coding, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 
   As a self-taught coder, Ive delved into the realm of coding with boundless enthusiasm and determination, embracing each challenge as an opportunity for growth and adaptation. 
@@ -13,7 +12,7 @@ const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes o
 
 const About: React.FC = () => {
   return (
-    <div id="about" className=" border-t-2 w-full m-auto py-16 gradient-bg">
+    <div id="about" className="border-t-2 w-full m-auto py-16 gradient-bg">
       <motion.h1
         className="font-nunito font-bold text-4xl text-center text-white mt-10 mb-5"
         {...aboutTitle}
@@ -21,9 +20,9 @@ const About: React.FC = () => {
         My Story
       </motion.h1>
 
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center px-4">
         <motion.div
-          className="w-full md:w-2/4 rounded-lg p-2 flex justify-center"
+          className="w-full md:w-2/4 rounded-lg p-2 flex justify-center mb-6 md:mb-0"
           {...aboutImage}
         >
           <motion.div
@@ -35,7 +34,7 @@ const About: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="text-slate-200 flex flex-col justify-start overflow-x-hidden md:w-2/3 p-4 mt-4"
+          className="text-slate-200 flex flex-col justify-start md:w-2/3 p-4"
           {...aboutText}
         >
           <TextEffect words={words} />
