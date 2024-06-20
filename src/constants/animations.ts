@@ -216,7 +216,7 @@ export const skillDuration = {
 };
 
 export const skillDetail = {
-  initial: { opacity: 0, x: 500, y: 0 },
+  initial: { opacity: 0, x: 0, y: 70 },
   whileInView: {
     opacity: 1,
     x: 0,
