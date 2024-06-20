@@ -4,8 +4,8 @@ import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 import { imageAssets } from '../constants/index';
 import { TextEffect } from '../constants/TextEffect';
 
-const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, Ive always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. Ive particularly enjoyed summer trips to pristine locations like Jasper and Banff. 
-  It wasnt until I turned 38 that I stumbled upon the world of coding, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 
+const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, Ive always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. 
+   I stumbled upon the world of coding in my recent years, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 
   As a self-taught coder, Ive delved into the realm of coding with boundless enthusiasm and determination, embracing each challenge as an opportunity for growth and adaptation. 
   
   Beyond coding, I find joy in staying active, indulging in culinary adventures, and immersing myself in the world of video games.`;
