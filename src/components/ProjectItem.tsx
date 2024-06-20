@@ -28,12 +28,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ img, title, link }) => {
             className="rounded-xl group-hover:opacity-10"
           />
           <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <h3 className="text-2xl font-bold text-gr font-nunito tracking-wider text-center">
+            <h3 className="lg:text-2xl sm:text-[10px] font-bold text-gr font-nunito tracking-wider text-center">
               {title}
             </h3>
 
             <a href={link}>
-              <p className="text-center p-3 mt-3 rounded-lg bg-black text-white font-bold cursor-pointer text-lg">
+              <p className="text-center lg:text-2xl sm:text-[10px] p-3 mt-3 rounded-lg bg-black text-white font-bold cursor-pointer text-lg">
                 View Project
               </p>
             </a>
