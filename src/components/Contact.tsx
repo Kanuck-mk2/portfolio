@@ -1,6 +1,5 @@
-import Resume from '../assets/Resume-2024.pdf';
 import { motion } from 'framer-motion';
-import { contact1, contact2, resume, submit } from '../constants/animations';
+import { contact1, contact2, submit } from '../constants/animations';
 import { formFields } from '../constants';
 import Form from '../components/Form';
 
