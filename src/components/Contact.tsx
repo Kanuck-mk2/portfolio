@@ -38,21 +38,6 @@ export default function Contact() {
         >
           Send Message
         </motion.button>
-        <motion.button
-          className=" bg-slate-200/20 backdrop-filter backdrop-blur-lg  text-white mt-4 w-full p-4 rounded-lg glow-border"
-          type="button"
-          {...resume}
-          onClick={() => {
-            const link = document.createElement('a');
-            link.href = Resume;
-            link.download = 'resume2024.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }}
-        >
-          Download Resume
-        </motion.button>
       </form>
     </div>
   );

@@ -12,7 +12,7 @@ const Form: React.FC<FormProps> = ({ fields }) => {
   return (
     <>
       {fields.map((field, index) => (
-        <motion.div key={index} {...form(index)}>
+        <motion.div key={index} {...form(index)}>g
           <div className="flex flex-col py-2">
             <label className="uppercase text-sm py-2 text-white">
               {field.label}
