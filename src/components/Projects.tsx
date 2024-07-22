@@ -1,6 +1,7 @@
 import ProjectItem from './ProjectItem';
 import burgerWebsiteImg from '../assets/burger-website.png';
 import nikeCloneImg from '../assets/nike-clone.png';
+import gymWebsiteImg from '../assets/gym-website.png';
 import { motion } from 'framer-motion';
 import {
   projectLayout,
@@ -39,12 +40,17 @@ export default function Projects() {
         <ProjectItem
           img={burgerWebsiteImg}
           title="Burger Restaurant Website Layout"
-          link="/"
+          link="https://burger-website-wine.vercel.app/"
         />
         <ProjectItem
           img={nikeCloneImg}
           title="Nike Landing Page Clone"
           link="/"
+        />
+        <ProjectItem
+          img={gymWebsiteImg}
+          title="Gym Website Concept"
+          link="https://gym-website-chi-ashen.vercel.app/"
         />
         {/*add another ProjectItem component here */}
       </motion.div>
