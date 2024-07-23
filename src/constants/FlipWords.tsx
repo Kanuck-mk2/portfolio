@@ -80,10 +80,10 @@ export const FlipWords = ({
             {word.split('').map((letter, letterIndex) => (
               <motion.span
                 key={currentWord + wordIndex + letter + letterIndex}
-                initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
+                initial={{ opacity: 0, y: 40, filter: 'blur(12px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 transition={{
-                  delay: letterIndex * 0.12,
+                  delay: letterIndex * 0.10,
                   duration: 0.4,
                 }}
                 className="inline-block"

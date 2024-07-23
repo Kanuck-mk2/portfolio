@@ -8,7 +8,7 @@ const Footer: React.FC<FooterProps> = () => {
 
   return (
     <motion.footer
-      className="gradient-bg2 backdrop-filter backdrop-blur-lg text-white py-4  flex flex-row justify-center "
+      className="gradient-bg backdrop-filter backdrop-blur-lg text-white py-4  flex flex-row justify-center "
     
     >
       <motion.p className="ml-10" {...footer}>
