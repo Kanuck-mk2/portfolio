@@ -22,9 +22,9 @@ const Hero = () => {
         {...glassFade}
       ></motion.div>
       <img
-        className="w-full h-screen object-cover object-left"
+        className="w-full h-screen object-cover object-center"
         alt="background"
-        src="/bg1.jpeg"
+        src="/bgimage8.jpg"
       />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
