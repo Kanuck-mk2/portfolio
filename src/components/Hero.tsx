@@ -80,7 +80,7 @@ const Hero = () => {
                   href="/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glow-border rounded-full "
+                  className="glow-border glow-border4 rounded-full "
                   {...linkAnimation}
                 >
                   <motion.img
@@ -97,7 +97,7 @@ const Hero = () => {
                   href="https://github.com/Kanuck-mk2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glow-border rounded-full"
+                  className="glow-border glow-border4 rounded-full"
                   {...gitAnimation}
                 >
                   <motion.img
@@ -113,7 +113,7 @@ const Hero = () => {
                   href="https://www.instagram.com/chad.parenteau2/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glow-border rounded-full "
+                  className="glow-border glow-border4 rounded-full "
                   {...instaAnimation}
                 >
                   <motion.img
