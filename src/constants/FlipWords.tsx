@@ -80,7 +80,7 @@ export const FlipWords = ({
             {word.split('').map((letter, letterIndex) => (
               <motion.span
                 key={currentWord + wordIndex + letter + letterIndex}
-                initial={{ opacity: 0, scale: 2.0, rotate: -320, y:-40, filter: 'blur(12px)'  }}
+                initial={{ opacity: 0, scale: 2.0, rotate: -320, y:-40, filter: 'blur(8px)'  }}
                 animate={{ opacity: 1, scale: 1 , rotate: 0, y: 0,  filter: 'blur(0px)' }}
                 transition={{
                   delay: letterIndex * 0.12,
