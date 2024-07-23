@@ -30,8 +30,10 @@ body {
     hsl(293, 96%, 40%)75%,
     hsl(209, 96%, 52%) 100%
   );
+
+
   z-index: -1;
-  animation: spin 10s linear infinite;
+  animation: spin 15s linear infinite;
   transition: all 0.6s ease;
 }
 
@@ -46,7 +48,9 @@ body {
   100% {
     transform: rotate(360deg);
   }
+
 }
+
 
 @keyframes glow {
   0% {
