@@ -22,11 +22,13 @@ body {
   position: absolute;
   inset: -10%;
   background: conic-gradient(
-    from 170deg at 50% 50%,
-    hsl(200, 100%, 50%) 0%, 
-    hsl(270, 100%, 70%) 33.33%, 
-    
-    hsl(200, 100%, 50%) 100% 
+    from 370deg at 80% 10%,
+    hsl(209, 96%, 52%) 0%,
+    hsl(293, 96%, 40%),
+    25%,
+    hsl(152, 96%, 36%) 50%,
+    hsl(293, 96%, 40%)75%,
+    hsl(209, 96%, 52%) 100%
   );
   z-index: -1;
   animation: spin 10s linear infinite;
@@ -160,7 +162,6 @@ body {
 .gradient-bg2 {
   background: linear-gradient(60deg, hsl(247, 96%, 4%), hsl(236, 36%, 60%));
 }
-
 
 .custom {
   background-image: url('/bg3.jpg');
