@@ -3,7 +3,6 @@ import ImageSlider from './ImageSlider';
 import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 import { imageAssets } from '../constants/index';
 import { TextEffect } from '../constants/TextEffect';
-import { ShootingStars } from '../constants/ShootingStars';
 
 const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, I've always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. 
    I stumbled upon the world of coding in my recent years, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 
