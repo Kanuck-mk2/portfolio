@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import {
-  skillDetail,
+  
   skillDuration,
   skillTitles,
   skillYear,
 } from '../constants/animations';
+import { TextEffect } from '../constants/TextEffect';
 
 interface SkillsSetProps {
   year: string;
@@ -49,12 +50,9 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
           </motion.span>
         </motion.p>
 
-        <motion.p
-          className="my-2 text-base font-normal text-white "
-          {...skillDetail}
-        >
-          {details}
-        </motion.p>
+        <motion.div className="my-2 text-base font-normal text-white ">
+          <TextEffect words={details} />
+        </motion.div>
       </li>
     </ol>
   );

@@ -23,9 +23,11 @@ export const TextEffect = ({
             'span',
             {
               opacity: 1,
+              y: [20, 0],
             },
             {
               duration: 1,
+
               delay: stagger(0.1),
             },
           );
@@ -46,6 +48,8 @@ export const TextEffect = ({
       }
     };
   }, [animate]);
+
+ 
 
   const renderWords = () => {
     return (

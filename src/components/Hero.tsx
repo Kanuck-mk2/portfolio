@@ -10,6 +10,7 @@ import {
   textAnimation2,
 } from '../constants/animations';
 import { FlipWords } from '../constants/FlipWords';
+import { ShootingStars } from '../constants/ShootingStars';
 
 const Hero = () => {
   const words = ['Designer', 'Web Developer', 'Tech Enthusiast'];
@@ -26,6 +27,7 @@ const Hero = () => {
         alt="background"
         src="/bgimage8.jpg"
       />
+      <ShootingStars className='z-5' />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="max-w-[850px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
@@ -70,7 +72,13 @@ const Hero = () => {
                   className=" flex justify-center items-center sm:text-3xl text-2xl w-[280px] h-[40px] "
                   whileHover={{ scale: 1.2 }}
                 >
-                  <FlipWords words={words} />
+                  <FlipWords
+                    words={words}
+                    gradients={[
+                    
+                      'linear-gradient(to right, #0FA9C7, #25C3EF)',
+                    ]}
+                  />
                 </motion.h2>
               </motion.div>
 

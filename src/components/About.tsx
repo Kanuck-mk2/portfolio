@@ -3,8 +3,9 @@ import ImageSlider from './ImageSlider';
 import { aboutImage, aboutText, aboutTitle } from '../constants/animations';
 import { imageAssets } from '../constants/index';
 import { TextEffect } from '../constants/TextEffect';
+import { ShootingStars } from '../constants/ShootingStars';
 
-const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, Ive always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. 
+const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes of Western Canada, I've always been fortunate to live close by the awe-inspiring beauty of the Canadian Rockies. 
    I stumbled upon the world of coding in my recent years, embarking on a transformative journey brimming with endless possibilities and exciting opportunities in technology. 
   As a self-taught coder, Ive delved into the realm of coding with boundless enthusiasm and determination, embracing each challenge as an opportunity for growth and adaptation. 
   
@@ -12,7 +13,8 @@ const words = `Growing up in Edmonton, Alberta, amidst the sweeping landscapes o
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="border-t-2 w-full m-auto py-16 gradient-bg">
+    <div id="about" className="border-t-2 w-full m-auto py-16 gradient-bg -z-20">
+     
       <motion.h1
         className="font-nunito font-bold text-4xl text-center text-white mt-10 mb-5"
         {...aboutTitle}
@@ -20,9 +22,9 @@ const About: React.FC = () => {
         My Story
       </motion.h1>
 
-      <div className="flex flex-col md:flex-row justify-between items-center px-4">
+      <div className="flex flex-col md:flex-row justify-between items-center ">
         <motion.div
-          className="w-full md:w-2/4 rounded-lg p-2 flex justify-center mb-6 md:mb-0"
+          className="w-full md:w-2/4 rounded-lg p-2 flex justify-center mb-6 "
           {...aboutImage}
         >
           <motion.div
