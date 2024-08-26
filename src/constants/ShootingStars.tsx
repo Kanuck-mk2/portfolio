@@ -30,26 +30,26 @@ const getRandomStartPoint = () => {
 
   switch (side) {
     case 0:
-      return { x: offset, y: 0, angle: 45 };
+      return { x: offset, y: 0, angle: 95 };
     case 1:
-      return { x: window.innerWidth, y: offset, angle: 135 };
+      return { x: window.innerWidth, y: offset, angle: 120 };
     case 2:
       return { x: offset, y: window.innerHeight, angle: 225 };
     case 3:
-      return { x: 0, y: offset, angle: 315 };
+      return { x: 0, y: offset, angle: 131 };
     default:
-      return { x: 0, y: 0, angle: 45 };
+      return { x: 0, y: 0, angle: 150 };
   }
 };
 export const ShootingStars: React.FC<ShootingStarsProps> = ({
-  minSpeed = 40,
-  maxSpeed = 70,
-  minDelay = 500,
-  maxDelay = 1500,
-  starColor = "#9E00FF",
-  trailColor = "#2EB9DF",
+  minSpeed = 10,
+  maxSpeed = 40,
+  minDelay = 1500,
+  maxDelay = 2500,
+  starColor = "#38E1F0",
+  trailColor = "#CD6CF4",
   starWidth = 10,
-  starHeight = 1,
+  starHeight = 10,
   className,
 }) => {
   const [star, setStar] = useState<ShootingStar | null>(null);
