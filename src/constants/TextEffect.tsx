@@ -23,10 +23,9 @@ export const TextEffect = ({
             'span',
             {
               opacity: 1,
-              y: [20, 0],
             },
             {
-              duration: 1,
+              duration: 0.2,
 
               delay: stagger(0.1),
             },
