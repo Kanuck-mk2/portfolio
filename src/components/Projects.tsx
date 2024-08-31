@@ -45,7 +45,8 @@ export default function Projects() {
         <ProjectItem
           img={nikeCloneImg}
           title="Nike Landing Page Clone"
-          link="/"
+          link="https://nike-clone-hazel.vercel.app/"
+
         />
         <ProjectItem
           img={gymWebsiteImg}
