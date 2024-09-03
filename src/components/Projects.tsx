@@ -1,5 +1,4 @@
 import ProjectItem from './ProjectItem';
-import burgerWebsiteImg from '../assets/burger-website.png';
 import nikeCloneImg from '../assets/nike-clone.png';
 import gymWebsiteImg from '../assets/gym-website.png';
 import { motion } from 'framer-motion';
@@ -37,11 +36,7 @@ export default function Projects() {
         className="grid sm:grid-cols-2 lg:grid-cols gap-12"
         {...projectLayout}
       >
-        <ProjectItem
-          img={burgerWebsiteImg}
-          title="Burger Restaurant Website Layout"
-          link="https://burger-website-wine.vercel.app/"
-        />
+    
         <ProjectItem
           img={nikeCloneImg}
           title="Nike Landing Page Clone"

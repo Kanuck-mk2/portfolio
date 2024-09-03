@@ -47,21 +47,21 @@ export const skillsData: SkillData[] = [
   {
     year: '2024',
     title: 'React',
-    duration: '5 Months',
+    duration: '6 Months',
     details:
       'Over the course of the past year, Ive delved into the captivating world of React, immersing myself in its ecosystem and mastering its intricacies. What began as a journey into the unknown has evolved into a profound understanding and appreciation for this powerful JavaScript library. From crafting simple components to architecting complex applications, my time with React has been a testament to the boundless potential of web development. With each project and challenge encountered along the way, Ive honed my skills, embraced new concepts, and solidified my foundation in modern frontend development. As I reflect on my journey, Im filled with excitement and anticipation for the possibilities that lie ahead, knowing that my journey with React is just the beginning of an endless pursuit of knowledge and innovation in the ever-evolving landscape of web development.',
   },
   {
     year: '2024',
     title: 'TailwindCSS',
-    duration: '3 Months',
+    duration: '4 Months',
     details:
       'I have been working extensively with Tailwind CSS, a utility-first CSS framework that streamlines the process of building responsive and visually appealing user interfaces. With Tailwind, I have been able to quickly create clean and modern designs by leveraging its extensive set of utility classes. However, I am also looking forward to deepening my understanding of Tailwind CSS by exploring advanced techniques and best practices. Tailwinds flexibility and simplicity make it an excellent choice for rapid prototyping and development. By honing my skills in Tailwind CSS, I aim to deliver even more polished and efficient user interfaces in my projects.',
   },
   {
     year: '2024',
     title: 'Framer Motion',
-    duration: '3 Months',
+    duration: '4 Months',
     details:
       "I have experience working with Framer Motion, a powerful animation library for React, which has allowed me to add delightful motion effects to my projects with ease. However, I'm also eager to expand my animation skills further by diving into GSAP (GreenSock Animation Platform) and Three Fiber. Learning GSAP will enable me to create complex animations and interactive experiences, while exploring Three Fiber will open up a whole new world of possibilities in 3D graphics and immersive web experiences. With a solid foundation in Framer Motion and a keen interest in mastering GSAP and Three Fiber, I'm excited to push the boundaries of what's possible in web animation and interactivity.",
   },
