@@ -27,7 +27,7 @@ const Hero = () => {
         alt="background"
         src="/bgimage8.jpg"
       />
-      <ShootingStars className='z-5' />
+      <ShootingStars className='z-1' />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="max-w-[850px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
@@ -85,7 +85,7 @@ const Hero = () => {
               <div className="flex justify-evenly lg:items-center pt-6 gap-9 max-w-[300px] w-full z-[999]">
                 <motion.a
                   title="/"
-                  href="/"
+                  href="https://www.linkedin.com/in/chad-parenteau-a786352aa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glow-border glow-border4 rounded-full "
