@@ -19,7 +19,7 @@ const About: React.FC = () => {
         {...aboutTitle}
       >
         My Story
-      </motion.h1>
+      </motion.h1> 
 
       <div className="flex flex-col md:flex-row justify-between items-center ">
         <motion.div

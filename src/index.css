@@ -27,10 +27,9 @@ body {
     hsl(293, 96%, 40%),
     25%,
     hsl(152, 96%, 36%) 50%,
-    hsl(293, 96%, 40%)75%,
+    hsl(293, 96%, 40%) 75%,
     hsl(209, 96%, 52%) 100%
   );
-
 
   z-index: -1;
   animation: spin 15s linear infinite;
@@ -48,9 +47,7 @@ body {
   100% {
     transform: rotate(360deg);
   }
-
 }
-
 
 @keyframes glow {
   0% {
@@ -136,9 +133,9 @@ body {
     rgb(178, 214, 243)
   );
 
-  background-clip: text;
-
   -webkit-background-clip: text;
+
+  background-clip: text;
 
   color: transparent;
 }
