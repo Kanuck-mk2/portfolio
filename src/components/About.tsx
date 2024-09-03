@@ -23,7 +23,7 @@ const About: React.FC = () => {
 
       <div className="flex flex-col md:flex-row justify-between items-center ">
         <motion.div
-          className="w-full md:w-2/4 rounded-lg flex justify-center mb-6 mr-5"
+          className="w-full md:w-2/4 rounded-lg flex justify-center mb-6 mr-10"
           {...aboutImage}
         >
           <motion.div
