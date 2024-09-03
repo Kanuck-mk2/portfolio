@@ -7,16 +7,19 @@ import { navLinkVariants, slideDown } from '../constants/animations';
 
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
-
+  
+  const toggleNav = () => {
+    setNav(!nav);
+  };
 
   const handleLinkClick = () => {
-    setNav(true);
+    setNav(false);
   };
 
   return (
     <div>
       <div className="fixed top-4 right-4 md:hidden text-white z-[999]">
-        <AiOutlineMenu onClick={handleLinkClick} size={25} />
+        <AiOutlineMenu onClick={toggleNav} size={25} />
       </div>
 
       {/* Mobile Navigation Menu */}
