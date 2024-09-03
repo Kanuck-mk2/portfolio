@@ -10,7 +10,7 @@ export default function Sidenav() {
 
 
   const handleLinkClick = () => {
-    setNav(false);
+    setNav(true);
   };
 
   return (
