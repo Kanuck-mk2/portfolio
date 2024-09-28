@@ -13,7 +13,7 @@ import { FlipWords } from '../constants/FlipWords';
 import { ShootingStars } from '../constants/ShootingStars';
 
 const Hero = () => {
-  const words = ['Designer', 'Web Developer', 'Tech Enthusiast'];
+  const words = ['Designer', 'Web Developer', 'Tech Enthusiast', 'かつこいい'];
 
   return (
     <div id="home" className="w-full h-screen relative">
@@ -27,7 +27,7 @@ const Hero = () => {
         alt="background"
         src="/bgimage8.jpg"
       />
-      <ShootingStars className='z-1' />
+      <ShootingStars className="z-1" />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
         <div className="max-w-[850px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center">
@@ -74,10 +74,7 @@ const Hero = () => {
                 >
                   <FlipWords
                     words={words}
-                    gradients={[
-                    
-                      'linear-gradient(to right, #0FA9C7, #25C3EF)',
-                    ]}
+                    gradients={['linear-gradient(to right, #0FA9C7, #25C3EF)']}
                   />
                 </motion.h2>
               </motion.div>
