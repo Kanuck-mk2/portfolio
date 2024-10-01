@@ -317,7 +317,7 @@ export const form = (index: number) => ({
     transition: { duration: 3, type: 'spring' },
   },
   viewport: { once: true },
-  whileTap: { scale: 0.5 },
+  whileTap: { scale: 0.5, transition: { type: 'spring' } },
 });
 
 export const submit = {

@@ -13,7 +13,7 @@ import { FlipWords } from '../constants/FlipWords';
 import { ShootingStars } from '../constants/ShootingStars';
 
 const Hero = () => {
-  const words = ['Designer', 'Web Developer', 'Tech Enthusiast', 'かつこいい'];
+  const words = ['Designer', 'Web Developer', 'Tech Enthusiast'];
 
   return (
     <div id="home" className="w-full h-screen relative">
