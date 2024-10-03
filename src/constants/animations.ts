@@ -184,9 +184,8 @@ export const skillYear = {
   initial: { opacity: 1, scale: 9.0 },
   whileInView: {
     opacity: 1,
-    rotate: 720,
     scale: 1.0,
-    transition: { duration: 5, type: 'spring' },
+    transition: { duration: 6, type: 'spring' },
   },
   viewport: { once: true },
   whileHover: { rotate: 360, scale: 2.5 },
