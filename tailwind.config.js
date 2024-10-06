@@ -8,6 +8,7 @@ export default {
         karla: ['Karla, san serif'],
         nunito: ['Nunito, sans serif'],
         kanit: ['Kanit, sans serif'],
+        kaushan: ['Kaushan Script, sans serif'],
       },
     },
   },

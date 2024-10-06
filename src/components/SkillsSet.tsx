@@ -21,7 +21,7 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
   details,
 }) => {
   return (
-    <ol className="flex flex-col mt-5 md:flex-row relative border-l border-stone-200">
+    <ul className="flex flex-col mt-5 md:flex-row relative border-l border-stone-200">
       <li className="mb-10 ml-4 ">
         <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border-white" />
         <motion.p
@@ -54,7 +54,7 @@ const SkillsSet: React.FC<SkillsSetProps> = ({
           <TextEffect words={details} />
         </motion.div>
       </li>
-    </ol>
+    </ul>
   );
 };
 

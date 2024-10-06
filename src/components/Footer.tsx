@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = () => {
     >
       <motion.p className="ml-10" {...footer}>
         &copy; {currentYear}{' '}
-        <span className="font-bold font-nunito">Chad Parenteau</span> - Web
+        <span className="font-bold font-kaushan">Chad Parenteau</span> - Web
         Developer
       </motion.p>
     </motion.footer>
