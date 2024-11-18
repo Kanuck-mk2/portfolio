@@ -18,7 +18,7 @@ export default function Sidenav() {
 
   return (
     <div>
-      <div className="fixed top-4 right-4 md:hidden text-white z-[999]">
+      <div className="fixed top-4 right-4 md:hidden text-white hover:text-sky-300 z-[999]">
         <AiOutlineMenu onClick={toggleNav} size={25} />
       </div>
 

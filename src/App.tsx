@@ -1,3 +1,6 @@
+import { Analytics } from "@vercel/analytics/react"
+
+
 import Hero from './components/Hero';
 import Sidenav from './components/Sidenav';
 import Skills from './components/Skills';
@@ -16,6 +19,7 @@ function App(): JSX.Element {
       <Projects />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   );
 }
