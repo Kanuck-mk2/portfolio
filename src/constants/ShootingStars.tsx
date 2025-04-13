@@ -1,4 +1,7 @@
 'use client';
+
+//Shooting stars component
+
 import { cn } from './cn';
 import React, { useEffect, useState, useRef } from 'react';
 
