@@ -12,11 +12,11 @@ const SkillsSet: React.FC<SkillsSetProps> = ({ title, details, index }) => {
   return (
     <div className="flex items-center justify-center w-full h-full">
       <motion.div
-        initial={{ opacity: 0, x: index % 2 === 0 ? -70 : 70 }}
+        initial={{ opacity: 0, x: index % 2 === 0 ? -200 : 200 }}
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: { duration: 2, type: 'spring' },
+          transition: { duration: 3, type: 'spring' },
         }}
         viewport={{ once: true }}
         className="relative w-full max-w-[850px] m-3 p-4 border-2 border-stone-200 bg-blue-400/10 backdrop-blur-lg rounded-lg"
