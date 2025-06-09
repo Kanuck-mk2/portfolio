@@ -17,13 +17,7 @@ export default function Skills() {
       </motion.h1>
 
       {skillsData.map((item, idx) => (
-        <SkillsSet
-          key={idx}
-          year={item.year}
-          title={item.title}
-          duration={item.duration}
-          details={item.details}
-        />
+        <SkillsSet key={idx} title={item.title} details={item.details} />
       ))}
     </div>
   );
