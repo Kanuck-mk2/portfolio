@@ -5,33 +5,35 @@ import { TextEffect } from '../constants/TextEffect';
 interface SkillsSetProps {
   title: string;
   details: string;
+  index: number;
 }
 
-const SkillsSet: React.FC<SkillsSetProps> = ({ title, details }) => {
+const SkillsSet: React.FC<SkillsSetProps> = ({ title, details, index }) => {
   return (
-    <div className='flex items-center justify-center w-full h-full'>
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="relative w-full max-w-[850px] m-3 p-4 border-2 border-stone-200 bg-blue-400/10 backdrop-blur-lg rounded-lg"
-    >
-      {/* Custom Dot */}
+    <div className="flex items-center justify-center w-full h-full">
+      <motion.div
+        initial={{ opacity: 0, x: index % 2 === 0 ? -70 : 70 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 2, type: 'spring' },
+        }}
+        viewport={{ once: true }}
+        className="relative w-full max-w-[850px] m-3 p-4 border-2 border-stone-200 bg-blue-400/10 backdrop-blur-lg rounded-lg"
+      >
+        <motion.p className="flex flex-wrap gap-4 flex-row items-center justify-center text-xs md:text-sm">
+          <motion.span
+            className="font-nunito text-lg font-semibold text-white"
+            {...skillTitles}
+          >
+            {title}
+          </motion.span>
+        </motion.p>
 
-      <motion.p className="flex flex-wrap gap-4 flex-row items-center justify-center text-xs md:text-sm">
-        <motion.span
-          className="font-nunito text-lg font-semibold text-white"
-          {...skillTitles}
-        >
-          {title}
-        </motion.span>
-      </motion.p>
-
-      <motion.div className="my-2 text-base font-normal text-white">
-        <TextEffect words={details} />
+        <motion.div className="my-2 text-base font-normal text-white">
+          <TextEffect words={details} />
+        </motion.div>
       </motion.div>
-    </motion.div>
     </div>
   );
 };

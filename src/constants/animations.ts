@@ -169,27 +169,17 @@ export const aboutText = {
 /////////////////////////////////////////////////*Skills animations*/////////////////////////////////////
 
 export const skillTitle = {
-  initial: { opacity: 0, x: 0, y: 30 },
+  initial: { opacity: 0, x: 0, y: 0, scale: 0.1 },
   whileInView: {
     opacity: 1,
     x: 0,
     y: 0,
-    transition: { type: 'spring', duration: 2 },
+    scale: 1.0,
+    transition: { duration: 3, type: 'spring' },
   },
   viewport: { once: true },
-  whileTap: { rotate: 360 },
 };
 
-export const skillYear = {
-  initial: { opacity: 1, scale: 9.0 },
-  whileInView: {
-    opacity: 1,
-    scale: 1.0,
-    transition: { duration: 6, type: 'spring' },
-  },
-  viewport: { once: true },
-  whileHover: { rotate: 360, scale: 2.5 },
-};
 
 export const skillTitles = {
   initial: { opacity: 0, x: 0, y: 0, scale: 0.1 },
@@ -203,30 +193,9 @@ export const skillTitles = {
   viewport: { once: true },
 };
 
-export const skillDuration = {
-  initial: { opacity: 0, x: 0, y: -20 },
-  whileInView: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { duration: 3, type: 'spring' },
-  },
-  viewport: { once: true },
-};
 
-export const skillDetail = {
-  initial: { opacity: 0, x: 0, y: 70 },
-  whileInView: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { type: 'spring', duration: 2 },
-  },
-  viewport: { once: true },
-  whileHover: {
-    scale: 1.05,
-  },
-};
+
+
 
 //////////////////////////////////////////////////*project animations*////////////////////////////////
 
