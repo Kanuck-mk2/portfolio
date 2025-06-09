@@ -1,60 +1,38 @@
 import { motion } from 'framer-motion';
-import {
-  
-  skillDuration,
-  skillTitles,
-  skillYear,
-} from '../constants/animations';
+import { skillTitles } from '../constants/animations';
 import { TextEffect } from '../constants/TextEffect';
 
 interface SkillsSetProps {
-  year: string;
   title: string;
-  duration: string;
   details: string;
 }
 
-const SkillsSet: React.FC<SkillsSetProps> = ({
-  year,
-  title,
-  duration,
-  details,
-}) => {
+const SkillsSet: React.FC<SkillsSetProps> = ({ title, details }) => {
   return (
-    <ul className="flex flex-col mt-5 md:flex-row relative border-l border-stone-200">
-      <li className="mb-10 ml-4 ">
-        <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border-white" />
-        <motion.p
-          className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm"
-          whileInView={{ opacity: 1 }}
+    <div className='flex items-center justify-center w-full h-full'>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="relative w-full max-w-[850px] m-3 p-4 border-2 border-stone-200 bg-blue-400/10 backdrop-blur-lg rounded-lg"
+    >
+      {/* Custom Dot */}
+
+      <motion.p className="flex flex-wrap gap-4 flex-row items-center justify-center text-xs md:text-sm">
+        <motion.span
+          className="font-nunito text-lg font-semibold text-white"
+          {...skillTitles}
         >
-          <motion.span
-            className="inline-block px-2 py-1 font-semibold text-white gradient-bg rounded-md"
-            {...skillYear}
-          >
-            {year}
-          </motion.span>
+          {title}
+        </motion.span>
+      </motion.p>
 
-          <motion.span
-            className=" font-nunito text-lg font-semibold text-white"
-            {...skillTitles}
-          >
-            {title}
-          </motion.span>
-
-          <motion.span
-            className="my-1 text-sm font-normal leading-none text-white"
-            {...skillDuration}
-          >
-            {duration}
-          </motion.span>
-        </motion.p>
-
-        <motion.div className="my-2 text-base font-normal text-white ">
-          <TextEffect words={details} />
-        </motion.div>
-      </li>
-    </ul>
+      <motion.div className="my-2 text-base font-normal text-white">
+        <TextEffect words={details} />
+      </motion.div>
+    </motion.div>
+    </div>
   );
 };
 
