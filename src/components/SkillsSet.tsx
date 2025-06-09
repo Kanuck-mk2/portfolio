@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { skillTitles, transition } from '../constants/animations';
+import { skillTitles, } from '../constants/animations';
 import { TextEffect } from '../constants/TextEffect';
 
 interface SkillsSetProps {
