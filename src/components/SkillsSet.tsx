@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { skillTitles, } from '../constants/animations';
+import { skillTitles } from '../constants/animations';
 import { TextEffect } from '../constants/TextEffect';
 
 interface SkillsSetProps {
@@ -18,9 +18,9 @@ const SkillsSet: React.FC<SkillsSetProps> = ({ title, details, index }) => {
           x: 0,
           transition: { duration: 3, type: 'spring' },
         }}
-        whileHover={{ y: -20, scale: 1.1 }}
+        whileHover={{ y: -15, scale: 1.1 }}
         viewport={{ once: true }}
-        className="relative w-full max-w-[850px] m-3 p-4 border-2 border-stone-200 bg-blue-400/10 backdrop-blur-lg rounded-lg"
+        className="relative w-full max-w-[850px] m-3 p-4 border-2 border-sky-700 bg-slate-600 rounded-lg"
       >
         <motion.p className="flex flex-wrap gap-4 flex-row items-center justify-center text-xs md:text-sm">
           <motion.span

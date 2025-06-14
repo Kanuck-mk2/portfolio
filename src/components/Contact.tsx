@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="gradient-bg2 border-t-2   rounded-t-md w-full m-auto md:pl-20 p-4 py-16 relative z-10"
+      className="bg-slate-700 border-t-2 border-sky-700  w-full m-auto md:pl-20 p-4 py-16 relative z-10"
     >
       <motion.h1
         className="py-4 text-4xl font-nunito font-bold text-center ml-20 -mt-3 text-white"

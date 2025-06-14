@@ -16,17 +16,21 @@ const Hero = () => {
   const words = ['Designer', 'Web Developer', 'Tech Enthusiast'];
 
   return (
-    <div id="home" className="w-full h-screen relative">
+    <div id="home" className="w-full h-screen relative bg-slate-700">
       <motion.div
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-transparent to-transparent z-10"
         style={{ backdropFilter: 'blur(20px)' }}
         {...glassFade}
       ></motion.div>
+
+      {/* placeholder image
       <img
         className="w-full h-screen object-cover object-center"
         alt="background"
         src="/bgimage8.jpg"
       />
+      */}
+
       <ShootingStars className="z-1" />
 
       <div className="w-full h-screen absolute top-0 left-0 flex justify-center items-center">
