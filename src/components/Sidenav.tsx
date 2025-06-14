@@ -7,7 +7,7 @@ import { navLinkVariants, slideDown } from '../constants/animations';
 
 export default function Sidenav() {
   const [nav, setNav] = useState(false);
-  
+
   const toggleNav = () => {
     setNav(!nav);
   };
@@ -18,28 +18,28 @@ export default function Sidenav() {
 
   return (
     <div>
+      {/* Mobile Toggle Button */}
       <div className="fixed top-4 right-4 md:hidden text-white hover:text-sky-300 z-[999]">
         <AiOutlineMenu onClick={toggleNav} size={25} />
       </div>
 
       {/* Mobile Navigation Menu */}
       {nav && (
-        <div className="fixed w-full h-screen sm:hidden flex flex-col justify-center items-center z-[999]">
-          {['Home', 'About', 'Skills', 'Projects', 'Contact'].map(
-            (label, index) => (
-              <NavItem
-                key={index}
-                label={label}
-                index={index}
-                onClick={handleLinkClick}
-              />
-            ),
-          )}
+        <div className="fixed w-full h-screen sm:hidden flex flex-col justify-center items-center z-[999] bg-slate-900/90">
+          {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((label, index) => (
+            <NavItem
+              key={index}
+              label={label}
+              index={index}
+              onClick={handleLinkClick}
+            />
+          ))}
         </div>
       )}
 
+      {/* Desktop Navigation Menu */}
       <motion.div
-        className="hidden md:flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/10 backdrop-filter backdrop-blur-lg text-slate-300 text-xl   rounded-sm fixed z-[999]"
+        className="hidden md:flex flex-row justify-center items-center top-0 w-full h-16 bg-slate-400/10 backdrop-filter backdrop-blur-lg text-slate-300 text-xl rounded-sm fixed z-[999]"
         {...slideDown}
       >
         {navLinks.map((link, index) => (
